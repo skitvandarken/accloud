@@ -186,15 +186,33 @@
 	"revendedor_detalhes_form": "Reseller Agent Details",
 	"subsidiaria_revendedor_form": "Which subsidiary do you want to work with?",
 	"nome_empresa_revendedor": "Company name:",
-
-
 	"mensagem": "Message",
-
 	"campo_obrigatorio": "This field is required",
 	"formato_invalido": "Invalid format",
-	"formato_invalido_email": "Invalid E-mail format, must include @ and ."
-
-
-	
-
+	"formato_invalido_email": "Invalid E-mail format, must include @ and .",
+	"sucesso": "Sucesss!",
+	"registro_sucesso": "Your registration request was sent successfully .",
+	"contatado_em_breve": "You will be contacted shortly.",
+	"erro": "Error",
+	"envio_falhou": "Your request could not be sent. Try again later.",
+	"erro_validacao": "Validation error",
+	"preencha_corretamente": "Please fill in the form correctly.",
+	"ok": "OK",
+	"enviando": "Sending request ...",
+	"painel_usuario": "User Dashboard",
+	"bem_vindo_de_volta": "Welcome back",
+	"em_construcao": "Under Construction",
+	"portal_em_desenvolvimento": "Portal Under Development",
+	"mensagem_construcao": "We're working hard to bring you new features. Soon you'll have access to all portal functionalities.",
+	"funcionalidades_em_breve": "Coming Soon Features",
+	"em_breve": "Soon",
+	"gestao_perfil": "Profile Management",
+	"descricao_gestao_perfil": "Update your personal information and preferences",
+	"parcerias": "Partnerships",
+	"descricao_parcerias": "Manage your partnerships and track progress",
+	"relatorios": "Reports",
+	"descricao_relatorios": "Access detailed reports and analytics",
+	"precisa_ajuda": "Need Help?",
+	"entre_contato_suporte": "Contact our support team for assistance",
+	"contatar_suporte": "Contact Support"
 }

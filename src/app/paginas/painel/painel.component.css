@@ -1,0 +1,19 @@
+/* Animation for coming soon cards */
+.uk-card-hover {
+  transition: transform 0.3s ease;
+}
+
+.uk-card-hover:hover {
+  transform: translateY(-5px);
+}
+
+/* Construction notice styling */
+.uk-alert-warning {
+  border-left: 4px solid #ffb800;
+}
+
+/* Support card styling */
+.uk-card-secondary {
+  background: linear-gradient(135deg, #1e87f0 0%, #0f6ecd 100%);
+  border-radius: 8px;
+}

@@ -1,46 +1,36 @@
 {
-	
-
-    "nav.visaogeral": "Visão Geral",
-	"nav.beneficios": "Beneficios",
-	"nav.partnership": "Tipos de Parceria",
-	"nav.services": "Serviços",
-	"nav.contacto": "Contacto",
-    "nav.criarconta": "Criar Conta",
-    "nav.entrar": "Entrar",
-	
-    "slider.titulo": "PARCEIRO INDICADOR DE NEGÓCIOS",
-    "slider.desc": "Apresente novas oportunidades de negócios, encontre novos clientes, \nrecomende-nos alguns leads qualificados  que resultem em novos contratos e para si resultem em comissões e remunerações",
-    "slider.botao": "SEJA INDICADOR DE NEGÓCIOS",
-
-    "slider.agente_titulo": "AGENTE DE VENDAS AUTORIZADO",
-    "slider.agente_desc": "Os Agentes de Vendas representam a Angola Cables no relacionamento com clientes, qualificam leads, desenvolvem relacionamento, \nacompanham vendas, crescimento e fecham negócios em nome da Angola Cables nos mercados locais \nSerá fornecido treino, formação e suporte à venda e gestão de canal local",
-    "slider.agente_botao": "SEJA AGENTE DE VENDAS",
-
-    "slider.revendedor_titulo": "PARCEIRO REVENDEDOR",
-    "slider.revendedor_desc": "Faça a gestão dos seus clientes e contratos de vendas de forma autónoma, tendo acesso a um stock de produtos com descontos especiais negociadas. \nA parceria garante infraestrutura e suporte técnico da Angola Cables, permitindo negociações competitivas nos seus mercados.",
-    "slider.revendedor_botao": "SEJA AGENTE DE VENDAS",
-
-
-
-    "participe_presenca_global": "Participe na presença global da Angola Cables",
-    "alcance_mercados": "Junto s vamos alcançar mercados e promover a nossa rede em soluções de transmissão, Internet e ICT, no Brasil, EUA, América Latina (LATAM), Europa, África e Médio-Oriente.",
-    "oportunidade_perfeita": "O nosso programa é a oportunidade perfeita para empresas de telecomunicações, operadoras e provedores de serviços de internet que desejam crescer em volume de negócios e expandir em alcance.",
-    "porque_tornar_se_parceiro": "Porquê tornar-se AC Partner?",
-    "programa_parceiros": "O programa Parceiros do Grupo Angola Cables foi criado para apoiar o crescimento dos nossos parceiros e ajudá-los a alcançar o sucesso com as melhores soluções de conectividade e interconexão. Nosso compromisso é oferecer suporte contínuo, recursos de alto nível e um ambiente colaborativo, ajudando a potenciar o seu negócio.",
-    "confiança_transparência_competitividade": "Confiança. Transparência. Competitividade",
-    "operadora_conectada_mundo": "21ª operadora mais conectada do mundo",
-    "operadora_conectada_africa": "1ª operadora mais conectada de África",
-    "operadora_conectada_cplp": "Operadora mais conectada da CPLP",
-    "nossas_certificacoes": "As Nossas Certificações",
-    "iso_9001": "ISO 9001",
-    "iso_27001": "ISO 27001",
-    "iso_20000": "ISO 20000",
-    "iso_27018": "ISO 27018",
-    "iso_27701": "ISO 27701",
-    "soc_type_ii": "SOC TYPE II",
-
-
+  "nav.visaogeral": "Visão Geral",
+  "nav.beneficios": "Beneficios",
+  "nav.partnership": "Tipos de Parceria",
+  "nav.services": "Serviços",
+  "nav.contacto": "Contacto",
+  "nav.criarconta": "Criar Conta",
+  "nav.entrar": "Entrar",
+  "slider.titulo": "PARCEIRO INDICADOR DE NEGÓCIOS",
+  "slider.desc": "Apresente novas oportunidades de negócios, encontre novos clientes, \nrecomende-nos alguns leads qualificados  que resultem em novos contratos e para si resultem em comissões e remunerações",
+  "slider.botao": "SEJA INDICADOR DE NEGÓCIOS",
+  "slider.agente_titulo": "AGENTE DE VENDAS AUTORIZADO",
+  "slider.agente_desc": "Os Agentes de Vendas representam a Angola Cables no relacionamento com clientes, qualificam leads, desenvolvem relacionamento, \nacompanham vendas, crescimento e fecham negócios em nome da Angola Cables nos mercados locais \nSerá fornecido treino, formação e suporte à venda e gestão de canal local",
+  "slider.agente_botao": "SEJA AGENTE DE VENDAS",
+  "slider.revendedor_titulo": "PARCEIRO REVENDEDOR",
+  "slider.revendedor_desc": "Faça a gestão dos seus clientes e contratos de vendas de forma autónoma, tendo acesso a um stock de produtos com descontos especiais negociadas. \nA parceria garante infraestrutura e suporte técnico da Angola Cables, permitindo negociações competitivas nos seus mercados.",
+  "slider.revendedor_botao": "SEJA AGENTE DE VENDAS",
+  "participe_presenca_global": "Participe na presença global da Angola Cables",
+  "alcance_mercados": "Junto s vamos alcançar mercados e promover a nossa rede em soluções de transmissão, Internet e ICT, no Brasil, EUA, América Latina (LATAM), Europa, África e Médio-Oriente.",
+  "oportunidade_perfeita": "O nosso programa é a oportunidade perfeita para empresas de telecomunicações, operadoras e provedores de serviços de internet que desejam crescer em volume de negócios e expandir em alcance.",
+  "porque_tornar_se_parceiro": "Porquê tornar-se AC Partner?",
+  "programa_parceiros": "O programa Parceiros do Grupo Angola Cables foi criado para apoiar o crescimento dos nossos parceiros e ajudá-los a alcançar o sucesso com as melhores soluções de conectividade e interconexão. Nosso compromisso é oferecer suporte contínuo, recursos de alto nível e um ambiente colaborativo, ajudando a potenciar o seu negócio.",
+  "confiança_transparência_competitividade": "Confiança. Transparência. Competitividade",
+  "operadora_conectada_mundo": "21ª operadora mais conectada do mundo",
+  "operadora_conectada_africa": "1ª operadora mais conectada de África",
+  "operadora_conectada_cplp": "Operadora mais conectada da CPLP",
+  "nossas_certificacoes": "As Nossas Certificações",
+  "iso_9001": "ISO 9001",
+  "iso_27001": "ISO 27001",
+  "iso_20000": "ISO 20000",
+  "iso_27018": "ISO 27018",
+  "iso_27701": "ISO 27701",
+  "soc_type_ii": "SOC TYPE II",
   "beneficios": "Benefícios ",
   "descricao_beneficios": "Ao aproveitar a infraestrutura robusta e as soluções de conectividade da Angola Cables, os participantes podem desbloquear novas oportunidades de negócios, aprimorar a entrega de serviços e estabelecer uma presença mais forte nos mercados globais.",
   "pronto_para_parceria": "Pronto para a parceria?",
@@ -55,28 +45,16 @@
   "expansao_global": "Expansão Global",
   "uso_logotipos_especiais": "Uso de Logotipos Especiais",
   "escolha_parceria": "Escolha o tipo de parceria:",
-
-
-
-  
-    "indicador_negocios_titulo": "Indicador de Negócios",
-    "indicador_negocios_descricao": "Os Indicadores de Negócios têm a possibilidade de apresentar oportunidades comerciais qualificadas que resultem em novos contratos com a Angola Cables.\n\nO parceiro regista o lead e encaminha a oportunidade para a equipa comercial Angola Cables ou TelCables.\n\nCaso o processo seja bem informado, processado no sistema AC e validado, poderá receber comissões ou taxas de recomendação, em caso de sucesso.",
-  
-    "agente_vendas_titulo": "Agente de Vendas Autorizado",
-    "agente_vendas_descricao": "Os Agentes de Vendas Autorizados são parceiros comerciais indirectos registados e aprovados para actuar no mercado em nome da Angola Cables ou TelCables.\n\nEstes parceiros desempenham um papel activo na qualificação de leads, construção de relacionamentos, identificação de oportunidades e concretização de negócios.\n\nPara serem aprovados como Agentes de Vendas, os parceiros precisam concluir treino, bem como, obter as certificações nas principais soluções técnicas e de produtos da Angola Cables.",
-  
-    "revendedor_titulo": "Revendedor",
-    "revendedor_descricao": "Os Revendedores da Angola Cables contratos directamente com os seus clientes e operam sob um acordo principal com a Angola Cables ou subsidiárias TelCables.\n\nEstes parceiros têm controlo total a sua carteira de clientes, stock de produtos, processo de vendas e relacionamento com os clientes e mercado.\n\nVantagens exclusivas para Revendedores: Acesso a tarifas com desconto em circuitos de transmissão, internet, colocation e ICT, permitindo a definição de margens próprias.\n\nVantagens exclusivas para Revendedores: Acesso a tarifas com desconto para espaço em racks, circuitos de transporte e trânsito IP, permitindo a definição de margens próprias.",
-  
-  
-    "download_label": "descarregar ficha:",
-    "become_partner": "tornar-se parceiro",
-    "partner_program_description": "ao ingressar no programa de parceiros da angola cables, sua empresa acessa soluções avançadas de conectividade, infraestrutura moderna e suporte especializado para fortalecer serviços, optimizar operações e impulsionar receitas.",
-
-
-
-    
-"descarregar_ficha": "Descarregar ficha:",
+  "indicador_negocios_titulo": "Indicador de Negócios",
+  "indicador_negocios_descricao": "Os Indicadores de Negócios têm a possibilidade de apresentar oportunidades comerciais qualificadas que resultem em novos contratos com a Angola Cables.\n\nO parceiro regista o lead e encaminha a oportunidade para a equipa comercial Angola Cables ou TelCables.\n\nCaso o processo seja bem informado, processado no sistema AC e validado, poderá receber comissões ou taxas de recomendação, em caso de sucesso.",
+  "agente_vendas_titulo": "Agente de Vendas Autorizado",
+  "agente_vendas_descricao": "Os Agentes de Vendas Autorizados são parceiros comerciais indirectos registados e aprovados para actuar no mercado em nome da Angola Cables ou TelCables.\n\nEstes parceiros desempenham um papel activo na qualificação de leads, construção de relacionamentos, identificação de oportunidades e concretização de negócios.\n\nPara serem aprovados como Agentes de Vendas, os parceiros precisam concluir treino, bem como, obter as certificações nas principais soluções técnicas e de produtos da Angola Cables.",
+  "revendedor_titulo": "Revendedor",
+  "revendedor_descricao": "Os Revendedores da Angola Cables contratos directamente com os seus clientes e operam sob um acordo principal com a Angola Cables ou subsidiárias TelCables.\n\nEstes parceiros têm controlo total a sua carteira de clientes, stock de produtos, processo de vendas e relacionamento com os clientes e mercado.\n\nVantagens exclusivas para Revendedores: Acesso a tarifas com desconto em circuitos de transmissão, internet, colocation e ICT, permitindo a definição de margens próprias.\n\nVantagens exclusivas para Revendedores: Acesso a tarifas com desconto para espaço em racks, circuitos de transporte e trânsito IP, permitindo a definição de margens próprias.",
+  "download_label": "descarregar ficha:",
+  "become_partner": "tornar-se parceiro",
+  "partner_program_description": "ao ingressar no programa de parceiros da angola cables, sua empresa acessa soluções avançadas de conectividade, infraestrutura moderna e suporte especializado para fortalecer serviços, optimizar operações e impulsionar receitas.",
+  "descarregar_ficha": "Descarregar ficha:",
   "tornar_se_parceiro": "Tornar-se parceiro",
   "programa_parceiros_descricao": "Ao ingressar no Programa de Parceiros da Angola Cables, sua empresa acessa soluções avançadas de conectividade, infraestrutura moderna e suporte especializado para fortalecer serviços, optimizar operações e impulsionar receitas.",
   "conectividade": "Conectividade",
@@ -93,9 +71,7 @@
   "gdi_descricao": "Ligação directa aos principais Data Centers internacionais, proporcionando acesso fácil a todas as empresas presentes nesses Data Centers através do cross connect.",
   "dia_titulo": "DIA",
   "dia_descricao": "A solução oferece acesso seguro a CDNs e Tier 1 globais sem ASN, conectando 27 IXPs estrategicamente.",
-  
   "detalhes": "Detalhes",
-
   "ip_transito_titulo": "IP TRÂNSITO",
   "ip_transito_descricao": "Beneficie de opções de roteamento locais e internacionais para redes Tier 1, CDNs e principais pontos de troca de tráfego (IXPs).",
   "ip_gamer_titulo": "IP Gamer",
@@ -122,14 +98,11 @@
   "shields2brasil_descricao": "Suporte especializado em roteamento, switching, segurança, VoIP e infraestrutura, com equipa da Angola Cables a gerir a rede, reduzindo erros e custos de mão-de-obra.",
   "sd_wan_titulo": "SD-WAN",
   "sd_wan_descricao": "Optimiza a rede com várias conexões (MPLS, LTE, Internet), segurança com inspeção SSL e gestão centralizada, reduzindo custos e aumentando segurança e eficiência.",
-
-
   "atendimento_personalizado_titulo": "Atendimento \nPersonalizado",
   "atendimento_personalizado_descricao": "A Angola Cables é uma multinacional com escritórios em mais de 7 cidades, 5 países e 200 colaboradores, de vários horizontes e culturas. Temos uma rede que cobre os 4 continentes do Atlântico. A Angola Cables é hoje uma empresa preparada para os desafios da digitalização com infraestruturas e talento humano para operar em qualquer mercado.",
   "envia_mensagem_titulo": "Envia-nos uma mensagem",
   "qual_sua_regiao": "Qual é a sua região?",
   "selecione": "Selecione...",
-  
   "primeiro_nome": "Primeiro Nome:",
   "digite_primeiro_nome": "Digite seu primeiro nome",
   "ultimo_nome": "Último Nome:",
@@ -140,14 +113,10 @@
   "sim": "SIM",
   "nao": "NÃO",
   "enviar_mensagem": "Enviar Mensagem",
-
-
   "links_uteis": "Links Úteis",
   "ficha_programa": "Ficha do Programa",
   "contacto": "Contacto",
   "copyright": "2025 Angola Cables & TelCables . Todos os direitos reservados.",
-
-
   "registro_parceiro_titulo": "Registe-se para se tornar um parceiro Angola Cables ou TelCables.",
   "primeiro_nome_form": "Primeiro Nome:",
   "digite_primeiro_nome_form": "Digite seu primeiro nome",
@@ -203,38 +172,50 @@
   "anos_operacao": "Há quantos anos a sua empresa está em operação?",
   "receita_anual": "Qual é em média a receita anual da sua empresa?",
   "infraestrutura_suporte": "Você possui uma infraestrutura capaz de lidar com o suporte ao cliente e pós-venda para os produtos da Angola Cables?",
- 
   "registe_titulo": "Registe-se para se tornar um parceiro Angola Cables ou TelCables.",
-  "indicadores_negocio_form":"Indicadores de Negócio",
+  "indicadores_negocio_form": "Indicadores de Negócio",
   "agentes_vendas_form": "Agente de Vendas Autorizados",
   "agente_vendads_form": "Agente de Vendas Autorizado",
   "revendedor_titulo_form": "Agente Revendedor",
   "indicador_detalhes": "Detalhes do Indicador de Negócio",
-  "indicador_subsidiaria":" Com qual subsidiária deseja trabalhar?",
-  "sel_opcao_form":"Selecione uma opção",
+  "indicador_subsidiaria": " Com qual subsidiária deseja trabalhar?",
+  "sel_opcao_form": "Selecione uma opção",
   "potencial_cliente_form": "Nome do potencial cliente:",
   "colab_num": "Número de colaboradores?",
   "eu_confirmo": "Eu confirmo que as informações acima estão correctas e aceito os termos do programa de parceria.",
- 
   "revendedor_detalhes_form": "Detalhes do Agente Revendedor",
   "subsidiaria_revendedor_form": "Com qual subsidiária deseja trabalhar?",
-
   "nome_empresa_revendedor": "Nome da empresa:",
-
-
-
-"form_indicador": "Formulário de cadastro \nde Indicador de Negócios",
-"form_agente": "Formulário de cadastro de \nde Venda Autorizado",
-"form_revendedor": "Formulário de cadastro \nde Agente Revendedor",
-
-
-"mensagem": "Mensagem",
-"campo_obrigatorio": "Este campo é obrigatório",
-"formato_invalido": "Formato inválido",
-"formato_invalido_email": "Formato de E-mail Inválido, deve incluir @ e ."
-
-
-
-  
+  "form_indicador": "Formulário de cadastro \nde Indicador de Negócios",
+  "form_agente": "Formulário de cadastro de \nde Venda Autorizado",
+  "form_revendedor": "Formulário de cadastro \nde Agente Revendedor",
+  "mensagem": "Mensagem",
+  "campo_obrigatorio": "Este campo é obrigatório",
+  "formato_invalido": "Formato inválido",
+  "formato_invalido_email": "Formato de E-mail Inválido, deve incluir @ e .",
+  "sucesso": "Successo!",
+  "registro_sucesso": "Sua solicitação foi enviada com sucesso!",
+  "contatado_em_breve": "Você será contactado em breve.",
+  "erro": "Erro",
+  "envio_falhou": "Sua solicitação falhou. Por favor, tente novamente.",
+  "erro_validacao": "Erro de Validação",
+  "preencha_corretamente": "Por favor, preencha os campos corretamente.",
+  "ok": "OK",
+  "enviando": "Enviando pedido ...",
+  "painel_usuario": "Painel do Usuário",
+  "bem_vindo_de_volta": "Bem-vindo de volta",
+  "em_construcao": "Em Construção",
+  "portal_em_desenvolvimento": "Portal em Desenvolvimento",
+  "mensagem_construcao": "Estamos trabalhando para trazer novos recursos. Em breve você terá acesso a todas as funcionalidades do portal.",
+  "funcionalidades_em_breve": "Funcionalidades em Breve",
+  "em_breve": "Em breve",
+  "gestao_perfil": "Gestão de Perfil",
+  "descricao_gestao_perfil": "Atualize suas informações pessoais e preferências",
+  "parcerias": "Parcerias",
+  "descricao_parcerias": "Gerencie suas parcerias e acompanhe o progresso",
+  "relatorios": "Relatórios",
+  "descricao_relatorios": "Acesse relatórios detalhados e análises",
+  "precisa_ajuda": "Precisa de Ajuda?",
+  "entre_contato_suporte": "Entre em contato com nossa equipe de suporte",
+  "contatar_suporte": "Contatar Suporte"
 }
-    

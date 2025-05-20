@@ -1,5 +1,85 @@
 <app-menu></app-menu>
 
+<app-menu></app-menu>
+
+<div class="uk-section uk-section-default uk-padding-remove-top">
+  <div class="uk-container uk-margin-top">
+    <!-- Header Section -->
+    <div class="uk-flex uk-flex-between uk-flex-middle">
+      <div>
+        <h1 class="uk-heading-primary uk-margin-remove-bottom">{{ 'painel_usuario' | translate }}</h1>
+        <p class="uk-text-meta uk-margin-remove-top">{{ 'bem_vindo_de_volta' | translate }}, {{ userName }}</p>
+      </div>
+      <div>
+        <span class="uk-label uk-label-warning">{{ 'em_construcao' | translate }}</span>
+      </div>
+    </div>
+
+    <!-- Under Construction Notice -->
+    <div class="uk-alert uk-alert-warning uk-margin-large-top" uk-alert>
+      <h3>{{ 'portal_em_desenvolvimento' | translate }}</h3>
+      <p>{{ 'mensagem_construcao' | translate }}</p>
+    </div>
+
+    <!-- Future Features Preview -->
+    <div class="uk-margin-xlarge-top">
+      <h2 class="uk-heading-line"><span>{{ 'funcionalidades_em_breve' | translate }}</span></h2>
+      
+      <div class="uk-child-width-1-3@m uk-grid-match uk-margin-medium-top" uk-grid>
+        <!-- Feature 1 -->
+        <div>
+          <div class="uk-card uk-card-default uk-card-hover uk-card-body">
+            <div class="uk-card-badge uk-label">{{ 'em_breve' | translate }}</div>
+            <h3 class="uk-card-title">{{ 'gestao_perfil' | translate }}</h3>
+            <p>{{ 'descricao_gestao_perfil' | translate }}</p>
+            <div class="uk-text-center">
+              <span uk-icon="icon: user; ratio: 2"></span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Feature 2 -->
+        <div>
+          <div class="uk-card uk-card-default uk-card-hover uk-card-body">
+            <div class="uk-card-badge uk-label">{{ 'em_breve' | translate }}</div>
+            <h3 class="uk-card-title">{{ 'parcerias' | translate }}</h3>
+            <p>{{ 'descricao_parcerias' | translate }}</p>
+            <div class="uk-text-center">
+              <span uk-icon="icon: social; ratio: 2"></span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Feature 3 -->
+        <div>
+          <div class="uk-card uk-card-default uk-card-hover uk-card-body">
+            <div class="uk-card-badge uk-label">{{ 'em_breve' | translate }}</div>
+            <h3 class="uk-card-title">{{ 'relatorios' | translate }}</h3>
+            <p>{{ 'descricao_relatorios' | translate }}</p>
+            <div class="uk-text-center">
+              <span uk-icon="icon: file-text; ratio: 2"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Support -->
+    <div class="uk-margin-xlarge-top uk-text-center">
+      <div class="uk-card uk-card-secondary uk-card-body uk-light">
+        <h3 class="uk-card-title">{{ 'precisa_ajuda' | translate }}</h3>
+        <p>{{ 'entre_contato_suporte' | translate }}</p>
+        <a href="mailto:geral@acparners.com" class="uk-button uk-button-primary">
+          {{ 'contatar_suporte' | translate }}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-rodape></app-rodape>
+
+
 <img src="img/bg-dev.jpg" alt="Angola Cables" uk-cover>
 
 

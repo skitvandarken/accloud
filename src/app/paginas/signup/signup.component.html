@@ -50,16 +50,17 @@
             <div class="uk-margin">
               <label for="email" class="uk-form-label"><b> {{'seu_email' | translate}} </b></label>
               <input id="email" formControlName="email" type="email" class="uk-input"
-              [ngClass]="{'uk-form-danger': partnershipForm.get('email')?.invalid && (partnershipForm.get('email')?.dirty || partnershipForm.get('email')?.touched),
-                         'uk-form-success': partnershipForm.get('email')?.valid && (partnershipForm.get('email')?.dirty || partnershipForm.get('email')?.touched)}"
-              />
+                [ngClass]="{'uk-form-danger': partnershipForm.get('email')?.invalid && (partnershipForm.get('email')?.dirty || partnershipForm.get('email')?.touched),
+                         'uk-form-success': partnershipForm.get('email')?.valid && (partnershipForm.get('email')?.dirty || partnershipForm.get('email')?.touched)}" />
 
-              <div *ngIf="partnershipForm.get('email')?.invalid && (partnershipForm.get('email')?.dirty || partnershipForm.get('email')?.touched)" class="uk-text-danger">
+              <div
+                *ngIf="partnershipForm.get('email')?.invalid && (partnershipForm.get('email')?.dirty || partnershipForm.get('email')?.touched)"
+                class="uk-text-danger">
                 <ng-container *ngIf="partnershipForm.get('email')?.errors?.['required']">
-                  {{ 'campo_obrigatorio' | translate }}  </ng-container>
+                  {{ 'campo_obrigatorio' | translate }} </ng-container>
                 <ng-container *ngIf="partnershipForm.get('email')?.errors?.['pattern']">
                   {{ 'formato_invalido_email' | translate }} </ng-container>
-                 </div>
+              </div>
             </div>
           </div>
 
@@ -67,15 +68,17 @@
             <div class="uk-margin">
               <label for="phone" class="uk-form-label"> <b> {{'telefone' | translate}} </b> </label>
               <input id="phone" formControlName="phone" type="text" class="uk-input"
-                     [ngClass]="{'uk-form-danger': partnershipForm.get('phone')?.invalid && (partnershipForm.get('phone')?.dirty || partnershipForm.get('phone')?.touched),
-                                'uk-form-success': partnershipForm.get('phone')?.valid && (partnershipForm.get('phone')?.dirty || partnershipForm.get('phone')?.touched)}"/>
-          
-              <div *ngIf="partnershipForm.get('phone')?.invalid && (partnershipForm.get('phone')?.dirty || partnershipForm.get('phone')?.touched)" class="uk-text-danger">
+                [ngClass]="{'uk-form-danger': partnershipForm.get('phone')?.invalid && (partnershipForm.get('phone')?.dirty || partnershipForm.get('phone')?.touched),
+                                'uk-form-success': partnershipForm.get('phone')?.valid && (partnershipForm.get('phone')?.dirty || partnershipForm.get('phone')?.touched)}" />
+
+              <div
+                *ngIf="partnershipForm.get('phone')?.invalid && (partnershipForm.get('phone')?.dirty || partnershipForm.get('phone')?.touched)"
+                class="uk-text-danger">
                 <ng-container *ngIf="partnershipForm.get('phone')?.errors?.['required']">
-                  {{ 'campo_obrigatorio' | translate }}  </ng-container>
+                  {{ 'campo_obrigatorio' | translate }} </ng-container>
                 <ng-container *ngIf="partnershipForm.get('phone')?.errors?.['pattern']">
                   {{ 'formato_invalido_email' | translate }} </ng-container>
-                 </div>
+              </div>
             </div>
           </div>
 
@@ -162,8 +165,9 @@
                   <label><input class="uk-checkbox" type="checkbox" /> {{'confirmar_informacoes' | translate }} <br />
                     <a href="#"><b> {{ 'consultar_termos' | translate }}</b></a></label>
                 </div>
-                <button type="submit" class="uk-button uk-button-primary uk-border-rounded">
-                  {{'solicitar' | translate }}
+                <button type="submit" class="uk-button uk-button-primary uk-border-rounded" [disabled]="isSubmitting">
+                  <span *ngIf="!isSubmitting">{{'solicitar' | translate}}</span>
+                  <span *ngIf="isSubmitting" uk-spinner></span>
                 </button>
               </div>
             </div>
@@ -252,8 +256,9 @@
                   <br />
                   <a href="#"><b> {{'consultar_termos' | translate }} </b></a></label>
               </div>
-              <button type="submit" class="uk-button uk-button-primary uk-border-rounded">
-                {{'solicitar' | translate}}
+              <button type="submit" class="uk-button uk-button-primary uk-border-rounded" [disabled]="isSubmitting">
+                <span *ngIf="!isSubmitting">{{'solicitar' | translate}}</span>
+                <span *ngIf="isSubmitting" uk-spinner></span>
               </button>
             </div>
           </div>
@@ -536,7 +541,7 @@
               </div>
             </div>
 
-            
+
             <div class="uk-width-1-1">
               <label for="servicoInteresse" class="uk-form-label"><b>{{ 'servico_interesse_revender'| translate }}</b>
               </label>
@@ -606,14 +611,63 @@
                   <label><input class="uk-checkbox" type="checkbox" /> {{'confirmar_informacoes' | translate }} <br />
                     <a href="#">{{'consultar_termos' | translate}} </a></label>
                 </div>
-                <button type="submit" class="uk-button uk-button-primary uk-border-rounded">
-                  {{'solicitar'}}
+                <button type="submit" class="uk-button uk-button-primary uk-border-rounded" [disabled]="isSubmitting">
+                  <span *ngIf="!isSubmitting">{{'solicitar' | translate}}</span>
+                  <span *ngIf="isSubmitting" uk-spinner></span>
                 </button>
               </div>
             </div>
           </div>
         </div>
       </form>
+    </div>
+  </div>
+
+  <!-- Loading Modal -->
+  <div id="loading-modal" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-text-center">
+      <div uk-spinner="ratio: 2"></div>
+      <p class="uk-margin-top">{{ 'enviando' | translate }}</p>
+    </div>
+  </div>
+
+  <!-- Success Modal -->
+  <div id="success-modal" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+      <button class="uk-modal-close-default" type="button" uk-close></button>
+      <h2 class="uk-modal-title">{{ 'sucesso' | translate }}</h2>
+      <p>{{ 'registro_sucesso' | translate }} 🎉</p>
+      <p class="uk-text-meta">{{ 'contatado_em_breve' | translate }}</p>
+      <div class="uk-text-right">
+        <button class="uk-button uk-button-default uk-border-rounded uk-modal-close" type="button">{{ 'ok' | translate
+          }}</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Error Modal -->
+  <div id="error-modal" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+      <button class="uk-modal-close-default" type="button" uk-close></button>
+      <h2 class="uk-modal-title">{{ 'erro' | translate }}</h2>
+      <p>{{ 'envio_falhou' | translate }}</p>
+      <div class="uk-text-right">
+        <button class="uk-button uk-button-default uk-border-rounded uk-modal-close" type="button">{{ 'ok' | translate
+          }}</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Validation Error Modal -->
+  <div id="validation-modal" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+      <button class="uk-modal-close-default" type="button" uk-close></button>
+      <h2 class="uk-modal-title">{{ 'erro_validacao' | translate }}</h2>
+      <p>{{ 'preencha_corretamente' | translate }}</p>
+      <div class="uk-text-right">
+        <button class="uk-button uk-button-default uk-border-rounded uk-modal-close" type="button">{{ 'ok' | translate
+          }}</button>
+      </div>
     </div>
   </div>
 </div>
