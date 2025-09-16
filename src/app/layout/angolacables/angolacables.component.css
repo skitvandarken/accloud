@@ -1,10 +1,164 @@
-.fundo-div{
+.fundo-div {
     background: linear-gradient(45deg, rgba(0, 24, 61), rgba(0, 97, 187), rgba(0, 42, 81)) !important;
 
 }
 
-.texto-div{
+.texto-div {
     color: white;
- 
 
+
+}
+
+
+
+.glass-accordion {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1rem;
+    list-style: none;
+}
+
+.glass-accordion li {
+    margin-bottom: 1rem;
+    border-radius: 16px;
+    background: rgb(18, 72, 130);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.glass-accordion .uk-accordion-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #fff;
+    padding: 1rem;
+    display: block;
+    transition: all 0.3s ease;
+
+
+    background: linear-gradient(135deg, #006a78, #006eff, #00ff95);
+    background-size: 200% 200%;
+    color: white;
+
+    font-weight: 600;
+    transition: background-position 0.6s ease, transform 0.3s ease;
+}
+
+.glass-accordion .uk-accordion-title:hover {
+    color: #fff;
+    /* dourado para destaque */
+}
+
+.glass-accordion .uk-accordion-content {
+    color: #fff;
+    font-weight: 500;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding: 1rem 1.5rem;
+    background: (0, 53, 110);
+}
+
+.pulso {
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 166, 255, 0.7),
+        0 0 8px rgba(0, 166, 255, 0.6),
+        0 0 10px rgba(0, 166, 255, 0.5);
+    transition: transform 0.3s ease;
+    animation: neonPulse 2.5s infinite alternate;
+}
+
+.pulso:hover {
+    transform: translateY(-5px) scale(1.02);
+    /* leve destaque ao passar o mouse */
+}
+
+@keyframes neonPulse {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 166, 255, 0.315),
+            0 0 8px rgba(0, 191, 255, 0.5),
+            0 0 10px rgba(0, 166, 255, 0.4);
+    }
+
+    100% {
+        box-shadow: 0 0 10px rgba(0, 200, 255, 0.226),
+            0 0 8px rgba(0, 247, 255, 0.8),
+            0 0 10px rgba(0, 200, 255, 0.7);
+    }
+}
+
+.beneficios {
+    border-radius: 30px;
+    background: linear-gradient(145deg, #00bcc9, #0044aa, #0066cc);
+    background-size: 200% 200%;
+    color: #fff;
+    transition: background-position 0.6s ease;
+}
+
+/* Efeito discreto ao passar o mouse */
+.beneficios:hover {
+    background-position: right center;
+}
+
+.uk-subnav>a {
+    background-color: rgb(0, 53, 110);
+    color: white;
+    border-radius: 35px;
+    padding: 10px 20px;
+    font-size: 2rem;
+}
+
+.bg-como {
+    background-color: rgb(18, 72, 130);
+    border-radius: 24px;
+    font-size: 1.5rem;
+    color: white !important;
+}
+
+
+.uk-subnav-pill>*>:first-child {
+    color: rgb(0, 53, 110);
+}
+
+
+.uk-subnav-pill>.uk-active>a {
+    background: linear-gradient(135deg, #00e1ff, #006eff, #00ff95);
+    background-size: 200% 200%;
+    color: white;
+    border-radius: 35px;
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: background-position 0.6s ease, transform 0.3s ease;
+}
+
+.uk-subnav-pill>.uk-active>a:hover {
+    background-position: right center;
+    /* move o gradiente */
+    transform: scale(1.05);
+    /* efeito de leve zoom */
+}
+
+.uk-card-title {
+    background: linear-gradient(135deg, #00e1ff, #006eff00, #00ff9500);
+    background-size: 200% 200%; /* permite animar o gradiente */
+    font-size: 1rem;
+    font-weight: 700;
+    color: rgb(0, 44, 110);
+    margin-bottom: 1rem;
+    padding: 5px 10px;
+    border-radius: 12px;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.uk-card-title:hover {
+    background-position: right center; /* move o gradiente */
+    transform: scale(1.08) rotate(-1deg); /* zoom + leve inclinação */
+    box-shadow: 0 6px 15px rgba(0, 110, 255, 0.3); /* brilho */
+}
+
+/* Animação contínua de gradiente */
+.uk-card-title:hover {
+    animation: gradientShift 2s ease infinite;
 }

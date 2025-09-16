@@ -1,50 +1,64 @@
-<div id="inicio"
-    class="uk-position-relative uk-visible-toggle uk-margin-small-top" 
-    tabindex="-1" 
-    uk-slideshow="animation: fade; autoplay: true; autoplay-interval: 4000; min-height: 480; max-height: 720">
+<div  id="inicio" class="uk-position-relative uk-visible-toggle uk-background-muted " tabindex="-1"
+    uk-slideshow="animation: fade; autoplay: true; autoplay-interval: 4000; ratio: 7:3;"  >
 
-    <div class="uk-slideshow-items">
+    <div  class="uk-slideshow-items  ">
         <!-- Slide 1 -->
-        <div>
-            <img class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-bottom" src="img/acsa-partner.jpg" alt="Referral Program" uk-cover>
-            <div class="uk-container uk-overlay uk-overlay-default uk-position-bottom uk-text-center uk-padding-small">
-                <h3 style="color: rgb(18, 72, 130); font-weight: 600;" class="uk-margin-remove">{{ 'slider.titulo' | translate }}</h3>
-                <p style="white-space: pre-line;" class="uk-margin-remove">{{ 'slider.desc' | translate }}</p>
-                <div class="uk-margin-small-top">
-                    <a routerLink="/conta"><button class="uk-button uk-button-primary uk-border-pill">{{ 'slider.botao' | translate }}</button></a>
+
+        <div style="border-radius: 60px 60px 60px 60px; margin-top: 120px; margin-bottom: 10px; box-shadow: rgba(0, 44, 110, 0.309) 0px 0px 5px 5px;"  class="uk-padding  uk-container">
+            <img class="uk-position-cover uk-animation-reverse " uk-scrollspy="cls: uk-animation-kenburns; repeat: true"
+                src="img/cloud-banner.png" alt="Referral Program" uk-cover>
+
+            <div class=" uk-container  uk-position-center uk-child-width-expand@s uk-text-center" uk-grid>
+
+                <div class="uk-margin-medium-large uk-padding ">
+                    <div class="uk-card uk-card-body">
+
+                        <h1 class="uk-heading-primary uk-text-bold uk-text-left" style="color: rgb(0, 44, 110);text-shadow: 0px 4px 6px rgba(108, 108, 108, 0.068) ; " i18n>
+                            Até $12.000 em serviços de Cloud para acelerar e escalar seu negócio
+                        </h1>
+                        <p class="uk-text-lead uk-text-left" style="color: white;" i18n>
+                            Junta-te ao maior programa de parceiros Microsoft em Angola
+                        </p>
+
+                        <div class="uk-text-left uk-margin-top uk-flex uk-flex-left uk-flex-middle uk-gap">
+                            <a routerLink="/">
+                                <button style="color: white;" class="uk-button hero-btn uk-border-pill ">
+                                    Teste Gratuito
+                                </button>
+                            </a>
+                            <a routerLink="/">
+                                <button style="color: white;"  class="uk-button hero-btn  uk-border-pill ">
+                                    Saber Mais
+                                </button>
+                            </a>
+                        </div>
+
+                    </div>
                 </div>
+
+
+                <div>
+                    <div class="uk-card  uk-card-body">
+                      
+                    </div>
+                </div>
+
             </div>
+
+
         </div>
 
-        <!-- Slide 2 -->
-        <div>
-            <img class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-bottom" src="img/acsa-partner-3.jpg" alt="Referral Program" uk-cover>
-            <div class="uk-container uk-overlay uk-overlay-default uk-position-bottom uk-text-center uk-padding-small">
-                <h3 style="color: rgb(18, 72, 130); font-weight: 600;" class="uk-margin-remove">{{ 'slider.agente_titulo' | translate }}</h3>
-                <p style="white-space: pre-line;" class="">{{ 'slider.agente_desc' | translate }}</p>
-                <div class="uk-margin-small-top">
-                    <a routerLink="/conta"><button class="uk-button uk-button-primary uk-border-pill">{{ 'slider.agente_botao' | translate }}</button></a>
-                </div>
-            </div>
-        </div>
 
-        <!-- Slide 3 -->
-        <div>
-            <img class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left" src="img/acsa-partner-2.jpg" alt="Sales Agent Program" uk-cover>
-            <div class="uk-container uk-margin-medium-top uk-overlay uk-overlay-default uk-position-bottom uk-text-center uk-padding-small">
-                <h3 style="color: rgb(18, 72, 130); font-weight: 600;" class="uk-margin-remove">{{ 'slider.revendedor_titulo' | translate }}</h3>
-                <p style="white-space: pre-line;" class="">{{ 'slider.revendedor_desc' | translate }}</p>
-                <div class="uk-margin-small-top">
-                    <a routerLink="/conta"><button class="uk-button uk-button-primary uk-button-medium uk-border-pill">{{ 'slider.revendedor_botao' | translate }}</button></a>
-                </div>
-            </div>
-        </div>
-        
+
+
+
     </div>
 
     <!-- Navigation -->
     <div class="uk-light">
-        <a style="color:black" class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
-        <a style="color:black" class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+        <a style="color:black" class="uk-position-center-left uk-position-small uk-hidden-hover" href="#"
+            uk-slidenav-previous uk-slideshow-item="previous"></a>
+        <a style="color:black" class="uk-position-center-right uk-position-small uk-hidden-hover" href="#"
+            uk-slidenav-next uk-slideshow-item="next"></a>
     </div>
 </div>

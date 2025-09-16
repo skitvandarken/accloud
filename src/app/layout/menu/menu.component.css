@@ -3,14 +3,21 @@
     z-index: 1000; /* Ensure it overlays other elements */
     position: fixed;
     top: 0;
+    left: 10px;
+    right: 10px;
     width: 100%;
     ; /* Background color for the navbar */
-    box-shadow: 0 -2px 20px rgba(0, 0, 0, 1); /* Optional shadow for better visibility */
-    display: flex;
+    background: linear-gradient(125deg, #ffffffc1, #ffffffe3, #f6fdffc1, #ffffffc1); /* Transparent background */
+    box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.374); /* Optional shadow for better visibility */
     justify-content: center;
     align-items: center;
     height: 20px;
+    border-radius: 40px 40px 40px 40px;
+    backdrop-filter: blur(10px); /* Optional: adds a blur effect to the background */
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
 }
+
+
 
 /* Media query for padding-bottom on larger screens */
 @media (min-width: 960px) {
@@ -68,7 +75,7 @@
     color: #ffffff; /* Ensure text is visible on the gradient */
     border: none; /* Remove any default border */
     padding: 10px 20px; /* Add padding for better appearance */
-    border-radius: 5px; /* Rounded corners for a modern look */
+    border-radius: 35px; /* Rounded corners for a modern look */
     transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
 }
 
