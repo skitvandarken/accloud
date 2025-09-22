@@ -1,156 +1,76 @@
+<div class="uk-position-relative">
+    <nav class="uk-navbar-container">
+        <div class="uk-container">
+            <div uk-navbar>
 
+                <!-- LOGO -->
+                <div class="uk-navbar-left">
+                    <a href="#inicio" uk-scroll="offset: 100" class="texto">
+                        <img class="uk-border-rounded" style="height: auto; width: 180px;" src="/img/ac-partner-logo.png">
+                    </a>
+                </div>
 
-<nav class="uk-navbar-container uk-container uk-navbar uk-margin-small-top " uk-navbar>
-    <div class="   ">
+                <!-- MENU DESKTOP -->
+                <div class="uk-navbar-center uk-visible@m">
+                    <ul class="uk-navbar-nav uk-text-left">
+                        <li><a routerLink="/oque">O QUE É?</a></li>
+                        <li><a routerLink="/porque">PORQUÊ PARTICIPAR?</a></li>
+                        <li><a routerLink="/como">COMO PARTICIPAR?</a></li>
+                        <li><a routerLink="/beneficios">BENEFÍCIOS</a></li>
+                        <li><a routerLink="/sectores">SECTORES</a></li>
+                    </ul>
+                </div>
 
-        <div class="uk-navbar-left uk-hidden@m">
-            <a class="uk-navbar-toggle" uk-navbar-toggle-icon href="#" uk-toggle="target: #offcanvas-nav"></a>
+                <!-- BOTÃO CONTACTO -->
+                <div class="uk-navbar-right uk-visible@m">
+                    <ul class="uk-navbar-nav">
+                       <!--  <li>
+                            <a routerLink="/contact">
+                                <button style="background-color: transparent; color: #fff; border: 0.5px solid white;" 
+                                    class="uk-button botao-contacto">
+                                    Contact Us
+                                </button>
+                            </a>
+                        </li>
+
+                        -->
+                    </ul>
+                </div>
+
+            </div>
         </div>
-        
-        <div class="uk-navbar-center  uk-visible@m ">
-            <ul class="uk-navbar-nav">
+    </nav>
 
-                <li class=" ">
-                    <a href="#inicio" uk-scroll="offset: 100" class="texto "><img class="uk-border-rounded" style="height: auto; width: 150px;" src="/img/ac-partner-logo.png"></a>
-                </li>
-
-                <li>
-                    <a class="" href="#visao-geral" uk-scroll >{{ 'nav.visaogeral' | translate }}</a>
-
-                    
-                </li>
-
-                <li>
-                    <a class="" href="#beneficios"  uk-scroll="offset: 100" >{{ 'nav.beneficios' | translate }} </a>
-                </li>
-
-                <li>
-                    <a class="" href="#tipos"  uk-scroll="offset: 100" i18n>{{ 'nav.partnership' | translate }} </a>
-                </li>
-
-                <li>
-                    <a class="" href="#servicos" uk-scroll="offset: 100" i18n>{{ 'nav.services' | translate }} </a>
-                </li>
-
-
-               
-
-                
-                <li>
-                    <a class="" href="#contacto" uk-scroll="offset: 100" i18n>{{ 'nav.contacto' | translate }} </a>
-                </li>
-
-                <li>
-                    
-                </li>
-
-
-<!-- 
-                <li class=" uk-flex uk-flex-middle">
-                    <div class="uk-flex uk-flex-middle">
-                      <a routerLink="/login"> <button (click)="login()"  class="uk-button uk-button-primary uk-border-rounded" >
-                            
-                        {{ 'nav.entrar' | translate }} </button></a> 
+    <!-- MENU MOBILE -->
+    <div class="uk-hidden@m">
+        <nav class="uk-navbar-container">
+            <div class="uk-container">
+                <div uk-navbar>
+                    <div class="uk-navbar-left">
+                        <a href="#inicio" uk-scroll="offset: 100" class="texto">
+                            <img class="uk-border-rounded" style="height: auto; width: 100px;" src="/img/logo-acsa-2.png">
+                        </a>
                     </div>
-                </li>
 
--->
-                <li class=" uk-flex uk-flex-middle">
-                    <div class="uk-flex uk-flex-middle">
-                       <a routerLink="/conta"> <button  class="uk-button  uk-border-pill" >
-                            
-                        {{ 'nav.criarconta' | translate }} </button></a>
+                    <div class="uk-navbar-right">
+                        <a class="uk-navbar-toggle" uk-navbar-toggle-icon href="#" uk-toggle="target: #offcanvas-nav"></a>
                     </div>
-                </li>
+                </div>
+            </div>
+        </nav>
+    </div>
 
-
-                <li  class="uk-flex uk-flex-middle">
-                    <a (click)="useLanguage('pt')">PT</a>
-
-                </li>
-
-                <li class="uk-flex uk-flex-middle">
-                    <a (click)="useLanguage('en')">EN</a>
-
-                </li>
-                
+    <!-- OFFCANVAS MENU MOBILE -->
+    <div id="offcanvas-nav" uk-offcanvas="overlay: true">
+        <div class="uk-offcanvas-bar">
+            <ul class="uk-nav uk-nav-default uk-margin-medium-left">
+                <li><a routerLink="/oque">O QUE É?</a></li>
+                <li><a routerLink="/porque">PORQUÊ PARTICIPAR?</a></li>
+                <li><a routerLink="/como">COMO PARTICIPAR?</a></li>
+                <li><a routerLink="/beneficios">BENEFÍCIOS</a></li>
+                <li><a routerLink="/sectores">SECTORES</a></li>
+                <li><a routerLink="/contact">CONTACTO</a></li>
             </ul>
         </div>
-
-        <div class="uk-navbar-right uk-visible@m"></div>
-    </div>
-</nav>
-
-<div id="offcanvas-nav" uk-offcanvas="overlay: true">
-    <div class="uk-offcanvas-bar">
-        <ul class="uk-nav uk-nav-default uk-margin-small-left">
-            <li class=" ">
-                <a style="color: black;" href="#inicio" uk-scroll="offset: 100" class="texto "><img class="uk-border-rounded" style="height: auto; width: 250px;" src="/img/ac-partner-logo.png"></a>
-            </li>
-            <li>
-                <a style="color: black;" class="" href="#visao-geral" uk-scroll >{{ 'nav.visaogeral' | translate }}</a>
-
-                
-            </li>
-
-            <li>
-                <a style="color: black;" class="" href="#beneficios"  uk-scroll="offset: 100" >{{ 'nav.beneficios' | translate }} </a>
-            </li>
-
-            <li>
-                <a style="color: black;" class="" href="#tipos"  uk-scroll="offset: 100" i18n>{{ 'nav.partnership' | translate }} </a>
-            </li>
-
-            <li>
-                <a style="color: black;" class="" href="#servicos" uk-scroll="offset: 100" i18n>{{ 'nav.services' | translate }} </a>
-            </li>
-
-
-           
-
-            
-            <li>
-                <a style="color: black;" class="" href="#contacto" uk-scroll="offset: 100" i18n>{{ 'nav.contacto' | translate }} </a>
-            </li>
-
-            <li>
-                
-            </li>
-
-
-<!-- 
-            <li class=" ">
-                <div class="">
-                  <a  routerLink="/login"> <button (click)="login()"  class="uk-button uk-button-primary uk-border-rounded" >
-                        
-                    {{ 'nav.entrar' | translate }} </button></a> 
-                </div>
-            </li>
-
-            -->
-
-            <li class=" ">
-                <div class="">
-                   <a routerLink="/conta"> <button  class="uk-button uk-button-primary uk-border-rounded" >
-                        
-                    {{ 'nav.criarconta' | translate }} </button></a>
-                </div>
-            </li>
-
-
-            <li  class="uk-flex uk-flex-middle">
-                <a style="color: black;" (click)="useLanguage('pt')">PT</a>
-
-            </li>
-
-            <li class="uk-flex uk-flex-middle">
-                <a style="color: black;" (click)="useLanguage('en')">EN</a>
-
-            </li>
-           
-
-            
-            
-        </ul>
     </div>
 </div>

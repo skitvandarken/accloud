@@ -139,26 +139,162 @@
 }
 
 .uk-card-title {
+
     background: linear-gradient(135deg, #00e1ff, #006eff00, #00ff9500);
-    background-size: 200% 200%; /* permite animar o gradiente */
+    background-size: 200% 200%;
+    /* permite animar o gradiente */
     font-size: 1rem;
     font-weight: 700;
-    color: rgb(0, 44, 110);
+    color: #fff;
     margin-bottom: 1rem;
     padding: 5px 10px;
     border-radius: 12px;
     transition: all 0.4s ease-in-out;
     position: relative;
     overflow: hidden;
+
 }
 
 .uk-card-title:hover {
-    background-position: right center; /* move o gradiente */
-    transform: scale(1.08) rotate(-1deg); /* zoom + leve inclinação */
-    box-shadow: 0 6px 15px rgba(0, 110, 255, 0.3); /* brilho */
+    background-position: right center;
+    /* move o gradiente */
+    transform: scale(1.08) rotate(-1deg);
+    /* zoom + leve inclinação */
+    box-shadow: 0 6px 15px rgba(0, 110, 255, 0.3);
+    /* brilho */
 }
 
 /* Animação contínua de gradiente */
 .uk-card-title:hover {
     animation: gradientShift 2s ease infinite;
+}
+
+@media (max-width: 640px) {
+    #inicio .uk-container.uk-position-center {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: flex-end;
+        /* push content down */
+        align-items: center;
+        /* center horizontally */
+        height: 100%;
+        padding-bottom: 20px;
+        /* breathing space from bottom */
+        text-align: center !important;
+    }
+
+    .hero-title {
+        font-size: 1.5rem !important;
+        margin: 0 10px;
+        font-weight: 700;
+    }
+
+    .hero-subtitle {
+        font-size: 0.8rem !important;
+        margin-top: 10px;
+    }
+
+    .uk-gap>*+* {
+        margin-left: 8px;
+    }
+
+
+    .oque {
+
+        margin: 20px !important;
+
+    }
+
+
+    .uk-subnav {
+        display: flex;
+        flex-direction: column;
+        /* stack vertically */
+        align-items: flex-start;
+        /* align left, no full width stretch */
+        gap: 8px;
+        /* space between pills */
+    }
+
+    .uk-subnav>li {
+        width: 100%;
+    }
+
+    .uk-subnav>li>a {
+        display: inline-block;
+        /* button hugs text */
+        font-size: 1rem;
+        /* smaller text */
+        padding: 8px 16px;
+        /* balanced pill padding */
+        border-radius: 20px;
+        color: white;
+        text-align: center;
+        justify-content: center;
+        
+    }
+}
+
+
+.card-bg {
+    position: relative;
+    border-radius: 0px 20px 0px 20px;
+    overflow: hidden;
+    color: white;
+    /* text white */
+    background: linear-gradient(135deg, rgba(0, 17, 101, 0.702), rgba(0, 95, 168, 0.3));
+    /* dark overlay */
+
+}
+
+.card-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: brightness(20%);
+    z-index: 0;
+    background: linear-gradient(135deg, rgba(0, 17, 101, 0.702), rgba(0, 95, 168, 0.3));
+    /* dark overlay */
+
+}
+
+.card-bg * {
+    position: relative;
+    z-index: 1;
+}
+
+/* === Background images per card === */
+.bg-banca::before {
+    background-image: url('https://mef-tg.org/images/pagepics/quantumpetroleum_ff_20200510_1589067730.jpg');
+}
+
+.bg-petroleo::before {
+    background-image: url('https://www.crowcon.com/wp-content/uploads/2024/10/Oil-gas-Leak-testing-scaled.jpg');
+}
+
+.bg-industria::before {
+    background-image: url('https://img-cdn.inc.com/image/upload/f_webp,c_fit,w_1920,q_auto/images/panoramic/getty_498769592_293026.jpg');
+}
+
+.bg-saude::before {
+    background-image: url('https://online.hbs.edu/Style%20Library/api/resize.aspx?imgpath=/online/PublishingImages/blog/health-care-economics.jpg&w=1200&h=630');
+}
+
+.bg-educacao::before {
+    background-image: url('https://xseededucation.com/wp-content/uploads/2022/01/The-growing-importance-of-E-Learning-in-India.jpg');
+}
+
+.bg-retalho::before {
+    background-image: url('https://media.istockphoto.com/id/1408417722/photo/customer-paying-using-smartphone-mobile-payment-nfc-contactless-technology-in-retial-store.jpg?s=612x612&w=0&k=20&c=vNgIhlIYCeVhfCWFMladpt70Y-w4Lv7Py0iO8_-fpQQ=');
+}
+
+.bg-telecom::before {
+    background-image: url('https://www.pwc.com/gx/en/industries/tmt/assets/telco-banner-v2.jpeg');
+}
+
+.bg-media::before {
+    background-image: url('https://imageio.forbes.com/specials-images/dam/imageserve/33947436/960x0.jpg?height=478&width=711&fit=bounds');
 }

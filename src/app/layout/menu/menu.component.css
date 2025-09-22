@@ -1,127 +1,260 @@
-
 .uk-navbar-container {
-    z-index: 1000; /* Ensure it overlays other elements */
+    z-index: 1000;
     position: fixed;
     top: 0;
-    left: 10px;
-    right: 10px;
     width: 100%;
-    ; /* Background color for the navbar */
-    background: linear-gradient(125deg, #ffffffc1, #ffffffe3, #f6fdffc1, #ffffffc1); /* Transparent background */
-    box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.374); /* Optional shadow for better visibility */
+    background: linear-gradient(125deg, #ffffffc1, #ffffffe3, #f6fdffc1, #ffffffc1);
+    box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.374);
+    backdrop-filter: blur(80px);
+    -webkit-backdrop-filter: blur(80px);
     justify-content: center;
     align-items: center;
-    height: 20px;
-    border-radius: 40px 40px 40px 40px;
-    backdrop-filter: blur(10px); /* Optional: adds a blur effect to the background */
-    -webkit-backdrop-filter: blur(10px); /* For Safari support */
+    padding: 10px 0;
+    border-radius: 0 0 20px 20px;
+    height: 80px;
+    margin: 0;
 }
 
+.uk-navbar-nav > li > a {
+    color: rgb(0, 44, 110);
+    font-weight: bold;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    text-transform: none;
+}
 
+.uk-navbar-nav > li > a:hover {
+    color: #00899e;
+}
 
-/* Media query for padding-bottom on larger screens */
-@media (min-width: 960px) {
-    .uk-navbar-container {
-        padding-bottom: 5%; /* Apply padding only for desktop view */
+/* Dropdown */
+.uk-navbar-dropdown {
+    display: none !important;
+    top: 90px !important;
+}
+
+.uk-navbar-dropdown.uk-open {
+    display: block !important;
+}
+
+.uk-navbar-dropdown-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.uk-navbar-dropdown-nav li {
+    margin: 2px 0;
+}
+
+.uk-navbar-dropdown-nav li a {
+    color: #20530a !important;
+    white-space: nowrap;
+}
+
+.uk-navbar-dropdown-nav li a:hover {
+    color: #00899e !important;
+}
+
+/* Dropdown width adjustments */
+.uk-navbar-dropdown-width-1 .uk-drop-grid > div {
+    width: 400px !important;
+}
+.uk-navbar-dropdown-width-1 .uk-drop-grid > div:first-child {
+    width: 450px !important;
+}
+.uk-navbar-dropdown-width-1 .uk-drop-grid > div:nth-child(2) {
+    width: 350px !important;
+}
+
+/* Botões */
+button {
+    border: none;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    text-align: center;
+    font-size: 16px;
+    margin-left: 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.botao-contacto:hover,
+.bt {
+    background-color: #1ab8dd;
+    color: black;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bt:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    background-color: #18a9cc;
+}
+
+/* Offcanvas - Glassmorphic */
+.uk-offcanvas-bar {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    color: #fff;
+}
+
+#offcanvas-nav .uk-nav-default li a {
+    color: #fff !important;
+    font-weight: bold;
+    text-transform: none;
+
+}
+
+#offcanvas-nav .uk-nav-default li a:hover {
+    color: #e0e0e0 !important;
+}
+
+#offcanvas-nav .uk-nav-header {
+    color: #e0e0e0;
+}
+
+/* Language Switcher */
+.uk-form-custom select {
+    opacity: 0;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.uk-form-custom button {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.uk-form-custom button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsividade */
+/* Large (≥1200px) */
+@media (min-width: 1200px) {
+    .uk-navbar-dropdown-width-2 {
+        width: 400px;
     }
 }
 
-.uk-navbar-center {
-    display: flex;
-    justify-content: center;
-    flex: 1;
-    
+/* Medium (768px – 1199px) */
+@media (max-width: 1199px) and (min-width: 768px) {
+    .uk-navbar-nav > li {
+        margin: 0 8px;
+    }
+    .uk-navbar-nav > li > a > img {
+        width: 150px !important;
+    }
+    .uk-navbar-dropdown-width-2 {
+        width: 350px;
+    }
+    .uk-navbar-container {
+        padding: 8px 0;
+    }
 }
 
-.uk-offcanvas-bar {
-    background-color: #fff; /* Background color for the offcanvas bar */
-    
+/* Small (≤767px) */
+@media (max-width: 767px) {
+    .uk-visible\@m {
+        display: none !important;
+    }
+    .uk-hidden\@m {
+        display: block !important;
+    }
+    #offcanvas-nav .uk-offcanvas-bar {
+        width: 100%;
+        background-color: rgb(4, 5, 51);
+        border-right: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    }
+    #offcanvas-nav img {
+        width: 200px !important;
+        margin-bottom: 20px;
+    }
+    .uk-form-custom button {
+        padding: 0 8px;
+        height: 36px;
+    }
+    .uk-modal-dialog {
+        width: 90%;
+        margin: 0 auto;
+    }
+    #search-modal .uk-modal-body {
+        padding: 15px;
+    }
+    #offcanvas-nav .uk-nav-default > li > a {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+    .uk-navbar-container {
+        height: 72px;
+        padding: 5px 0;
+    }
 }
 
-.texto{
-    color: #fff ;
+/* Extra small (≤480px) */
+@media (max-width: 480px) {
+    #offcanvas-nav .uk-offcanvas-bar {
+        width: 250px;
+    }
+    #offcanvas-nav img {
+        width: 180px !important;
+    }
+    .uk-modal-dialog {
+        padding: 10px;
+    }
+    #search-modal input.uk-input {
+        font-size: 14px;
+    }
+    .uk-button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    .uk-navbar-container {
+        height: 72px;
+        padding: 5px 0;
+    }
 }
 
-.texto:hover{
-    color: #d0d0d0 ;
+/* Extra narrow (≤400px) */
+@media (max-width: 400px) {
+    .uk-form-custom button {
+        padding: 0 6px;
+    }
+    .bandeiras {
+        width: 16px;
+    }
+    #selected-language {
+        font-size: 12px !important;
+    }
 }
 
-
-.icone-branco{
-    color: white;
+/* Landscape */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+    .uk-navbar-container {
+        padding: 3px 0;
+    }
+    #offcanvas-nav .uk-offcanvas-bar {
+        height: 80vh;
+    }
 }
 
-.uk-navbar-nav>li>a{
-    color: #3e3e3e;
-    font-weight: bold;
-    font-family: inherit
-    
-}
-
-.uk-navbar-nav>li>a:hover{
-    color: #9d9d9d;
-    font-weight: bold;
-    font-family: inherit
-    
-}
-
-
-
-
-
-.uk-button-primary {
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
-    background: linear-gradient(125deg, rgb(0, 44, 110), rgba(0, 97, 187, 1), rgb(0, 63, 122)) !important;
-    color: #ffffff; /* Ensure text is visible on the gradient */
-    border: none; /* Remove any default border */
-    padding: 10px 20px; /* Add padding for better appearance */
-    border-radius: 35px; /* Rounded corners for a modern look */
-    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
-}
-
-.uk-button-primary:hover {
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
-    transform: translateY(-2px); /* Slight lift effect on hover */
-    color: #e6f7ff; /* Slightly lighter text color on hover */
-}
-
-
-
-div
-{
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-  padding: 1rem 0rem;
-}
-
-p, .translated
-{
-  background-color: #d4f3ff;
-  padding:0.5rem 1rem;
-}
-
-button {
-  background-color: #008CBA;
-  border: none;
-  color: white;
-  padding: 0.25rem 0.5rem;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin-left: 1rem;
-  border-radius: 0.5rem;
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: #005f73;
-  }
-}
-
-.title {
-  background-color: #bde8f8;
-  padding: 0.5rem 2rem 1.5rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+/* High DPI */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .uk-navbar-container {
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+    }
 }

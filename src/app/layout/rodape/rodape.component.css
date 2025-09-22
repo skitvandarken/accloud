@@ -1,94 +1,103 @@
 .site-footer {
-    background:linear-gradient(45deg, rgba(0, 24, 61), rgba(0, 97, 187), rgba(0, 42, 81)) !important;
-    
-    padding: 40px 0;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow at the top */
-    position: relative;
-    bottom: 0;
-    width: 100%;
 
-    color: white;
-  }
+  padding: 40px 0;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  /* Slight shadow at the top */
+  position: relative;
+  bottom: 0;
+  width: 100%;
 
-  li, a, p {
-    color: #fff;
+  color: rgb(0, 53, 110);
 }
-  
-  .site-footer .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  /* Footer content layout: 3 columns */
-  .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 10px; /* Adds space between columns */
-  
-  }
-  
-  /* Footer columns style */
-  .footer-column {
-    flex: 1;
-    min-width: 200px;
-  }
-  
-  /* Footer Links */
-  .footer-links {
-    list-style: none;
-    padding: 0;
-    margin: 5px 0 0;
-  }
-  
-  .footer-links li {
-    margin-bottom: 10px;
-  }
-  
-  .footer-links a {
-    text-decoration: none;
-    color:#fff;
-    transition: color 0.3s;
-  }
-  
-  .footer-links a:hover {
-    color: #85afff; /* Change link color on hover */
-  }
-  
-  
-  
-  /* Social Media Icons */
-  .social-links {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 15px;
-  }
-  
-  .social-links a {
-    text-decoration: none;
-    color: #333;
-    font-size: 24px;
-  }
-  
-  .social-links a:hover {
-    color: #f0506e; /* Change icon color on hover */
-  }
-  
-  /* Google Maps iframe styling */
-  .footer-column iframe {
-    border-radius: 8px; /* Rounded edges for the map */
-    margin-top: 15px;
-  }
-  
-  .link{
-    color: #ffffff !important;
-  }
+
+li,
+a,
+p {
+  color: rgb(0, 53, 110);
+}
+
+.site-footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Footer content layout: 3 columns */
+.footer-content {
+  background: linear-gradient(360deg, #00e1ff, #00e1ff00, #d2d2d200);
+  padding: 50px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+  /* Adds space between columns */
+
+}
+
+/* Footer columns style */
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Footer Links */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: rgb(0, 53, 110);
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #85afff;
+  /* Change link color on hover */
+}
 
 
-  .fundo-rodape{
-    background: linear-gradient(45deg, rgba(0, 24, 61), rgba(0, 97, 187), rgba(0, 42, 81)) !important;
 
-  }
+/* Social Media Icons */
+.social-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 24px;
+}
+
+.social-links a:hover {
+  color: #f0506e;
+  /* Change icon color on hover */
+}
+
+/* Google Maps iframe styling */
+.footer-column iframe {
+  border-radius: 8px;
+  /* Rounded edges for the map */
+  margin-top: 15px;
+}
+
+.link {
+  color:rgb(0, 53, 110) !important;
+}
+
+
+.fundo-rodape {
+  background: linear-gradient(45deg, rgba(0, 24, 61), rgba(0, 97, 187), rgba(0, 42, 81)) !important;
+
+}
