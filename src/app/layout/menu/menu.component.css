@@ -141,6 +141,25 @@ button {
     background: rgba(255, 255, 255, 0.2);
 }
 
+@media (max-width: 1200px) {
+  .uk-visible\@m {
+    display: none !important;
+  }
+  .uk-hidden\@m {
+    display: block !important;
+  }
+}
+
+
+/* Responsive Media Queries */
+/* Large screens (desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .uk-navbar-dropdown-width-2 {
+        width: 400px;
+    }
+}
+
+
 /* Responsividade */
 /* Large (≥1200px) */
 @media (min-width: 1200px) {
