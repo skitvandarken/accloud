@@ -145,9 +145,9 @@
     /* permite animar o gradiente */
     font-size: 1rem;
     font-weight: 700;
-    color: #fff;
+    color: rgb(0, 53, 110);
     margin-bottom: 1rem;
-    padding: 5px 10px;
+    padding: 10px 15px;
     border-radius: 12px;
     transition: all 0.4s ease-in-out;
     position: relative;

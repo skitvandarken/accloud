@@ -1,0 +1,54 @@
+.fundo-cabecalho {
+  background-image: url('/img/ad.png');
+  
+  position: relative;
+  min-height: 400px;
+  /* Adjust based on design */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #000;
+  position: relative;
+  min-height: 400px;
+  /* Adjust based on design */
+}
+
+.logo-cabecalho-pagina {
+  height: 40px;
+  width: auto;
+
+}
+
+.uk-heading-divider {
+    font-weight: 800;
+    color: rgb(0, 53, 110);
+}
+
+label {
+    font-weight: 500;
+ 
+}
+
+.uk-subnav-pill>*>:first-child {
+    color: rgb(0, 53, 110);
+}
+
+
+.uk-subnav-pill>.uk-active>a {
+    background: linear-gradient(135deg, #00e1ff, #006eff, #00ff95);
+    background-size: 200% 200%;
+    color: white;
+    border-radius: 35px;
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: background-position 0.6s ease, transform 0.3s ease;
+}
+
+.uk-subnav-pill>.uk-active>a:hover {
+    background-position: right center;
+    /* move o gradiente */
+    transform: scale(1.05);
+    /* efeito de leve zoom */
+}
+
+

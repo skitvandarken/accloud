@@ -1,4 +1,19 @@
 /* Default desktop ratio */
+
+
+.hero-subtitle {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 500;
+    max-width: 80%;
+}
+
+.hero-title {
+    font-weight: 700;
+    font-size: 3rem;
+    color: #fff;
+}
+
 #inicio .uk-slideshow-items {
     aspect-ratio: 7/3;
 
@@ -63,8 +78,8 @@
     .hero-title {
         font-size: 1.5rem !important;
         text-align: center;
-        color: #fff!important;
-    
+        color: #fff !important;
+
 
     }
 
