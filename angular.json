@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "part": {
+    "accloud": {
       
       
       "projectType": "application",
@@ -15,7 +15,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/part",
+            "outputPath": "dist/accloud",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "part:build:production"
+              "buildTarget": "accloud:build:production"
             },
             "development": {
-              "buildTarget": "part:build:development"
+              "buildTarget": "accloud:build:development"
             }
           },
           "defaultConfiguration": "development"
