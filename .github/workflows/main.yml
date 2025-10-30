@@ -1,30 +1,141 @@
-name: Deploy Angular App to Web Disk
+name: 🚀 Secure Angular Deploy with Firebase
 on:
   push:
     branches:
-      - main  # Dispara ao fazer push na branch main
+      - main
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
+      - name: 🛠️ Checkout Repository
         uses: actions/checkout@v3
-      - name: Setup Node.js
+
+      - name: 📦 Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '22' # Versão compatível com Angular
-      - name: Install Dependencies
+          node-version: "22"
+          cache: "npm"
+
+      - name: 🔐 Inject Firebase Secrets
+        run: |
+          # Create production environment file
+          mkdir -p src/environments
+          cat > src/environments/environment.prod.ts <<EOF
+          export const environment = {
+            production: true,
+            firebase: {
+              apiKey: '${{ secrets.FIREBASE_API_KEY }}',
+              authDomain: '${{ secrets.FIREBASE_AUTH_DOMAIN }}',
+              projectId: '${{ secrets.FIREBASE_PROJECT_ID }}',
+              storageBucket: '${{ secrets.FIREBASE_STORAGE_BUCKET }}',
+              messagingSenderId: '${{ secrets.FIREBASE_MESSAGING_SENDER_ID }}',
+              appId: '${{ secrets.FIREBASE_APP_ID }}'
+            }
+          };
+          EOF
+
+          # Verify file was created (without exposing secrets)
+          grep "production:" src/environments/environment.prod.ts
+
+      - name: 📌 Install Dependencies
         run: npm ci
-      - name: Build Angular App
+
+      - name: 🏗️ Build Angular App
         run: npm run build -- --configuration production
-      - name: Deploy via WebDAV
+        env:
+          NODE_OPTIONS: "--max_old_space_size=4096"
+
+      - name: 🐛 Verify Build Output
+        run: |
+          echo "Build directory contents:"
+          ls -la dist/tcng/browser
+          echo "Checking for Firebase config in main.js:"
+          grep -o "apiKey" dist/tcng/browser/main.js || echo "No API key found in build"
+
+      - name: 🧹 Secure Clean & Deploy via WebDAV
         env:
           WEBDISK_USERNAME: ${{ secrets.WEBDISK_USERNAME }}
           WEBDISK_PASSWORD: ${{ secrets.WEBDISK_PASSWORD }}
         run: |
-          BUILD_DIR="dist/part/browser"
-          WEBDISK_URL="https://parceiros-demo-acsa.fluxo-host.com:2078"
-          for file in $(find $BUILD_DIR -type f); do
-            REMOTE_PATH="${WEBDISK_URL}/${file#"$BUILD_DIR/"}"
-            curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -T "$file" "$REMOTE_PATH"
+          # ===== CONFIGURATION =====
+          BUILD_DIR="dist/tcng/browser"
+          WEBDISK_URL="https://aceleracloud.marketing.host2africa.com:2078"
+
+          # Protected items (won't be touched)
+          PROTECTED_ITEMS=(
+            "cgi-bin"
+            ".well-known"
+            ".tmb"
+          
+          )
+          # =========================
+
+          # 🔐 Verify WebDAV connection
+          echo "🔐 Testing WebDAV connection..."
+          if ! curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -X PROPFIND $WEBDISK_URL/ --fail --silent --show-error >/dev/null; then
+            echo "❌ FATAL: WebDAV authentication failed!"
+            exit 1
+          fi
+
+          # 🗑️ Get remote items using xmlstarlet
+          echo "📡 Fetching remote file list..."
+          sudo apt-get update && sudo apt-get install -y xmlstarlet
+          REMOTE_ITEMS=$(curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -X PROPFIND $WEBDISK_URL/ --silent | \
+            xmlstarlet sel -t -v "//a:href" -n | \
+            sed "s|$WEBDISK_URL||" | sed 's|^/||' | grep -v '^$' | sort -ur)
+
+          # 💣 Delete non-protected items
+          echo "🧹 Starting cleanup..."
+          for item in $REMOTE_ITEMS; do
+            [[ -z "$item" ]] && continue
+            
+            protected=false
+            for protected_item in "${PROTECTED_ITEMS[@]}"; do
+              [[ "$item" == "$protected_item"* ]] && protected=true && break
+            done
+
+            if ! $protected; then
+              echo "🗑️ Deleting: $item"
+              curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -X DELETE "$WEBDISK_URL/$item" --silent --show-error --fail || \
+              curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -X DELETE "$WEBDISK_URL/$item/" --silent --show-error --fail || true
+            else
+              echo "🛡️ Preserving: $item"
+            fi
           done
+
+          # 🚀 Deploy new build
+          echo "🚀 Uploading build..."
+          find $BUILD_DIR -type f | while read -r file; do
+            remote_path="${file#$BUILD_DIR/}"
+            remote_dir=$(dirname "$remote_path")
+            
+            # cria diretórios recursivamente
+            if [[ "$remote_dir" != "." ]]; then
+              IFS='/' read -ra DIR_PARTS <<< "$remote_dir"
+              path=""
+              for part in "${DIR_PARTS[@]}"; do
+                path="$path/$part"
+                curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -X MKCOL "$WEBDISK_URL$path" \
+                  --silent --show-error --fail >/dev/null 2>&1 || true
+              done
+            fi
+
+            for attempt in {1..3}; do
+              # 🔥 apaga antes de enviar, evita conflito 409
+              curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -X DELETE "$WEBDISK_URL/$remote_path" --silent --fail || true
+
+              if curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -T "$file" "$WEBDISK_URL/$remote_path" --silent --show-error --fail; then
+                echo "✅ Uploaded: $remote_path"
+                break
+              elif [[ $attempt -eq 3 ]]; then
+                echo "❌ Failed to upload: $remote_path"
+                exit 1
+              else
+                sleep $((attempt * 2))
+              fi
+            done
+          done
+
+          echo "🎉 Deployment completed successfully!"
+          echo "🌐 Live at: https://aceleracloud.marketing.host2africa.com"
