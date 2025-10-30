@@ -107,6 +107,7 @@ export class CandidaturaComponent {
       return;
     }
 
+
     this.isSubmitting = true;
     UIkit.modal('#loading-modal').show();
 
