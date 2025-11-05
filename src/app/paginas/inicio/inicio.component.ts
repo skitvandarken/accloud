@@ -6,10 +6,14 @@ import { AngolacablesComponent } from '../../layout/angolacables/angolacables.co
 import { RodapeComponent } from '../../layout/rodape/rodape.component';
 import { SliderComponent } from '../../layout/slider/slider.component';
 import { SobreComponent } from '../../layout/sobre/sobre.component';
+import { PorqueComponent } from '../../layout/porque/porque.component';
+import { QuemComponent } from '../../layout/quem/quem.component';
+import { ComoComponent } from '../../layout/como/como.component';
+import { ParceirosComponent } from '../../layout/parceiros/parceiros.component';
 
 @Component({
   selector: 'app-inicio',
-  imports: [MenuComponent, AngolacablesComponent, SobreComponent, RodapeComponent, SliderComponent, ],
+  imports: [MenuComponent, AngolacablesComponent, QuemComponent, SobreComponent, PorqueComponent, ComoComponent, ParceirosComponent,  RodapeComponent, SliderComponent, ],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css'
 })

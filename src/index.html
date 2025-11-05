@@ -30,5 +30,16 @@
 </head>
 <body>
   <app-root></app-root>
+
+  <script>
+
+    // Ensure UIKit is loaded and components are initialized
+document.addEventListener('DOMContentLoaded', function() {
+    // Reinitialize UIKit components if needed
+    if (typeof UIkit !== 'undefined') {
+        UIkit.switcher('.uk-switcher');
+    }
+});
+</script>
 </body>
 </html>

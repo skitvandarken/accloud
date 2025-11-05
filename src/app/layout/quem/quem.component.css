@@ -1,0 +1,213 @@
+/* Remove default margins and padding */
+.uk-section {
+    padding: 0;
+}
+
+.uk-container-expand {
+    max-width: 100%;
+    padding: 0;
+}
+
+/* Image Styles */
+.participar-image {
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgb(237, 237, 237);
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+}
+
+/* Title Styles */
+.participar-titulo {
+    color: rgb(18, 72, 130);
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 2rem;
+    
+    /* Fluid typography */
+    font-size: clamp(1.75rem, 4vw, 3rem);
+    line-height: 1.2;
+}
+
+/* Accordion Container */
+.accordion-container {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Glass Accordion - FIXED */
+.glass-accordion {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.glass-accordion li {
+    margin-bottom: 1rem;
+    border-radius: 16px;
+    background: rgb(18, 72, 130);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+}
+
+.glass-accordion .uk-accordion-title {
+    font-weight: 600;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    display: block;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #006a78, #006eff, #00ff95);
+    background-size: 200% 200%;
+    
+    /* Fluid typography */
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    line-height: 1.4;
+    
+    /* Ensure proper width */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.glass-accordion .uk-accordion-title:hover {
+    background-position: 100% 100%;
+    transform: translateY(-1px);
+}
+
+.glass-accordion .uk-accordion-content {
+    color: #fff;
+    font-weight: 500;
+    line-height: 1.6;
+    padding: 1rem 1.5rem;
+    background: rgb(0, 53, 110);
+    
+    /* Fluid typography */
+    font-size: clamp(0.875rem, 1.5vw, 0.95rem);
+    
+    /* Ensure proper width */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Mobile First Adjustments */
+@media (max-width: 959px) {
+    .uk-grid.uk-grid-collapse {
+        margin-left: 0;
+    }
+    
+    .uk-padding {
+        padding: 1rem;
+    }
+    
+    .participar-titulo {
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+    
+    .glass-accordion {
+        max-width: 100%;
+        padding: 0;
+    }
+    
+    .glass-accordion li {
+        margin-bottom: 0.75rem;
+        border-radius: 12px;
+    }
+    
+    .glass-accordion .uk-accordion-title {
+        padding: 0.875rem 1rem;
+        font-size: 1rem;
+    }
+    
+    .glass-accordion .uk-accordion-content {
+        padding: 0.875rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .participar-image {
+        border-radius: 20px;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+/* Small Mobile Devices (iPhone SE) */
+@media (max-width: 374px) {
+    .uk-padding {
+        padding: 0.5rem;
+    }
+    
+    .participar-titulo {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .glass-accordion li {
+        margin-bottom: 0.5rem;
+        border-radius: 10px;
+    }
+    
+    .glass-accordion .uk-accordion-title {
+        padding: 0.75rem 0.875rem;
+        font-size: 0.9rem;
+    }
+    
+    .glass-accordion .uk-accordion-content {
+        padding: 0.75rem 0.875rem;
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+    
+    .participar-image {
+        border-radius: 15px;
+        max-width: 300px;
+    }
+}
+
+/* Tablet Adjustments */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .participar-image {
+        max-width: 400px;
+    }
+    
+    .glass-accordion .uk-accordion-title {
+        padding: 1rem 1.25rem;
+    }
+    
+    .glass-accordion .uk-accordion-content {
+        padding: 1rem 1.25rem;
+    }
+}
+
+/* Large Desktop Adjustments */
+@media (min-width: 1200px) {
+    .participar-image {
+        max-width: 600px;
+    }
+}
+
+/* Fix for UIKit grid issues */
+.uk-grid > * {
+    padding-left: 0;
+}
+
+.uk-grid-collapse {
+    margin-left: 0;
+}
+
+.uk-grid-collapse > * {
+    padding-left: 0;
+}
+
+/* Ensure no horizontal overflow */
+body {
+    overflow-x: hidden;
+}
+
+.uk-container {
+    overflow-x: hidden;
+}
