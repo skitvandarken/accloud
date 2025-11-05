@@ -3,20 +3,15 @@
 }
 
 .botao-azul {
-
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     color: #022561;
     background-color: #28C1FD;
 }
 
-
-
 .botao-azul:hover {
-
     transform: scale(1.05);
     cursor: pointer;
 }
-
 
 .fundo-cta {
     background-image: url('/img/ad.png');
@@ -25,15 +20,41 @@
     background-size: cover;
     border-radius: 30px;
     background-color: #000;
+    position: relative;
+    overflow: hidden;
+}
 
+/* A animação agora está apenas no pseudo-elemento da imagem */
+.fundo-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/img/ad.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 30px;
     animation: zoomIn 12s ease-in-out infinite alternate;
+    z-index: 1;
+}
+
+/* Garante que o conteúdo fique acima da imagem animada */
+.fundo-cta > * {
+    position: relative;
+    z-index: 2;
 }
 
 @keyframes zoomIn {
-    0% { transform: scale(1); }
-    100% { transform: scale(1.08); }
+    0% { 
+        transform: scale(1); 
+    }
+    100% { 
+        transform: scale(1.08); 
+    }
 }
-
 
 .botao-ad {
     cursor: pointer;
@@ -44,12 +65,10 @@
     font-size: 14px;
 }
 
-
-
 .margem-texto {
-    width: 60%; ; margin: 0 auto;
+    width: 60%; 
+    margin: 0 auto;
 }
-
 
 @media (max-width: 767px) {
     .uk-visible\@m {
@@ -62,12 +81,12 @@
 
     #offcanvas-nav .uk-offcanvas-bar {
         width: 300px;
-
     }
 
     .margem-texto {
-    width: 100%; ; margin: 0 auto;
-}
+        width: 100%; 
+        margin: 0 auto;
+    }
 
     .uk-navbar-container {
         padding: 9px 0;
@@ -128,7 +147,6 @@
     }
 }
 
-
 .bt {
     background: linear-gradient(135deg, #00e1ff, #006eff, #00ff95);
     background-size: 200% 200%;
@@ -141,7 +159,5 @@
 
 .bt:hover {
     background-position: right center;
-    /* move o gradiente */
     transform: scale(1.05);
-    /* efeito de leve zoom */
 }

@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
+import { TranslatePipe,  TranslateService } from '@ngx-translate/core';
 import { ParceirosComponent } from '../parceiros/parceiros.component';
 import { CtaComponent } from '../cta/cta.component';
 

@@ -1,0 +1,293 @@
+.titulo-1 {
+    font-weight: 700;
+    color: rgb(18, 72, 130);
+    text-align: left;
+    
+    /* Fluid typography */
+    font-size: clamp(1.75rem, 4vw, 3rem);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.descricao-1 {
+    color: rgb(18, 72, 130);
+    text-align: justify;
+    
+    /* Fluid typography */
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    line-height: 1.6;
+}
+
+.video-thumbnail {
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 234, 255, 0.6);
+    animation: pulseGlow 2s infinite;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 100%;
+    height: auto;
+}
+
+.video-thumbnail:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 30px rgba(0, 234, 255, 0.8);
+}
+
+@keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 20px rgba(0, 234, 255, 0.6); }
+    50% { box-shadow: 0 0 30px rgba(0, 234, 255, 0.9); }
+}
+
+/* Modal video responsiveness */
+.promo-video {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+}
+
+.uk-modal-dialog {
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Ultra-wide screens (2560px+) */
+@media (min-width: 2560px) {
+    .uk-container {
+        max-width: 1400px;
+    }
+    
+    .titulo-1 {
+        font-size: 3.5rem;
+    }
+    
+    .descricao-1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Large desktops (1920px - 2559px) */
+@media (min-width: 1920px) and (max-width: 2559px) {
+    .uk-container {
+        max-width: 1200px;
+    }
+}
+
+/* Standard desktops (1440px - 1919px) */
+@media (min-width: 1440px) and (max-width: 1919px) {
+    .uk-container {
+        max-width: 1100px;
+    }
+}
+
+/* Small desktops/Laptops (1024px - 1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .uk-container {
+        max-width: 980px;
+    }
+    
+    .titulo-1 {
+        font-size: 2.5rem;
+    }
+    
+    .descricao-1 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Tablets Landscape (768px - 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+    .uk-child-width-1-2@m {
+        width: 100%;
+    }
+    
+    .titulo-1 {
+        text-align: center;
+        font-size: 2.2rem;
+    }
+    
+    .descricao-1 {
+        text-align: center;
+        font-size: 1.1rem;
+    }
+    
+    .uk-text-left@m.uk-text-center {
+        text-align: center !important;
+    }
+    
+    .video-thumbnail {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+/* Tablets Portrait (600px - 767px) */
+@media (max-width: 767px) and (min-width: 600px) {
+    .uk-margin-large-top {
+        margin-top: 2rem !important;
+    }
+    
+    .uk-margin-large-bottom {
+        margin-bottom: 2rem !important;
+    }
+    
+    .titulo-1 {
+        text-align: center;
+        font-size: 2rem;
+    }
+    
+    .descricao-1 {
+        text-align: center;
+        font-size: 1.1rem;
+        text-align-last: center;
+    }
+    
+    .video-thumbnail {
+        max-width: 85%;
+        margin-top: 1rem;
+    }
+    
+    .uk-flex-middle {
+        align-items: flex-start !important;
+    }
+}
+
+/* Large Mobile (425px - 599px) */
+@media (max-width: 599px) and (min-width: 425px) {
+    .uk-container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .titulo-1 {
+        text-align: center;
+        font-size: 1.8rem;
+    }
+    
+    .descricao-1 {
+        text-align: center;
+        font-size: 1rem;
+        text-align-last: center;
+    }
+    
+    .video-thumbnail {
+        max-width: 90%;
+        border-radius: 15px;
+    }
+    
+    .uk-margin-medium-top {
+        margin-top: 1.5rem !important;
+    }
+}
+
+/* Medium Mobile (375px - 424px) */
+@media (max-width: 424px) and (min-width: 375px) {
+    .uk-container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .titulo-1 {
+        text-align: center;
+        font-size: 1.6rem;
+    }
+    
+    .descricao-1 {
+        text-align: center;
+        font-size: 0.95rem;
+        text-align-last: center;
+        line-height: 1.5;
+    }
+    
+    .video-thumbnail {
+        max-width: 95%;
+        border-radius: 12px;
+    }
+    
+    .icone {
+        margin-right: 0.5rem !important;
+    }
+}
+
+/* Small Mobile (320px - 374px) - iPhone SE */
+@media (max-width: 374px) {
+    .uk-container {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    
+    .titulo-1 {
+        text-align: center;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+    
+    .descricao-1 {
+        text-align: center;
+        font-size: 0.9rem;
+        text-align-last: center;
+        line-height: 1.4;
+    }
+    
+    .video-thumbnail {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+    
+    .uk-card-body {
+        padding: 15px !important;
+    }
+    
+    .uk-margin-medium-top {
+        margin-top: 1rem !important;
+    }
+    
+    .icone {
+        margin-right: 0.25rem !important;
+        transform: scale(0.9);
+    }
+}
+
+/* Foldable devices (max-width: 319px) */
+@media (max-width: 319px) {
+    .titulo-1 {
+        font-size: 1.2rem;
+    }
+    
+    .descricao-1 {
+        font-size: 0.85rem;
+    }
+    
+    .video-thumbnail {
+        border-radius: 8px;
+    }
+}
+
+/* Height-based adjustments for very short screens */
+@media (max-height: 600px) and (min-width: 768px) {
+    .uk-margin-large-top {
+        margin-top: 1rem !important;
+    }
+    
+    .uk-margin-large-bottom {
+        margin-bottom: 1rem !important;
+    }
+    
+    .titulo-1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .descricao-1 {
+        font-size: 1rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    .video-thumbnail {
+        display: none;
+    }
+    
+    .titulo-1, .descricao-1 {
+        color: #000 !important;
+    }
+}

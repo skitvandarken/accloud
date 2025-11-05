@@ -1,53 +1,19 @@
-/* Default desktop ratio */
+.hero-title {
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
 
+    /* Fluid typography - scales with screen size */
+    font-size: clamp(1.5rem, 4vw, 3rem);
+}
 
 .hero-subtitle {
     color: #fff;
-    font-size: 1.5rem;
     font-weight: 500;
-    max-width: 80%;
-}
+    line-height: 1.4;
 
-.hero-title {
-    font-weight: 700;
-    font-size: 3rem;
-    color: #fff;
-}
-
-#inicio .uk-slideshow-items {
-    aspect-ratio: 7/3;
-
-}
-
-/* Tablet ratio */
-@media (max-width: 960px) {
-    #inicio .uk-slideshow-items {
-        aspect-ratio: 16/9;
-        height: 50vh;
-    }
-
-
-    .hero-title {
-        font-size: 5rem !important;
-        text-align: center !important;
-        font-weight: 700 !important;
-        text-align: left !important;
-    }
-}
-
-/* Mobile ratio */
-@media (max-width: 640px) {
-    #inicio .uk-slideshow-items {
-        aspect-ratio: 4/5;
-        height: 50vh;
-    }
-
-    .hero-title {
-        font-size: 5rem !important;
-        text-align: center !important;
-        font-weight: 700 !important;
-        text-align: left !important;
-    }
+    /* Fluid typography for subtitle */
+    font-size: clamp(0.875rem, 2vw, 1.5rem);
 }
 
 /* Image scaling */
@@ -64,79 +30,6 @@
     margin-top: 120px;
     margin-bottom: 10px;
     box-shadow: rgba(0, 44, 110, 0.3) 0px 0px 5px 5px;
-
-
-}
-
-@media (max-width: 640px) {
-    .slide-content {
-        margin-top: 40px !important;
-        margin-bottom: 5px !important;
-        border-radius: 20px !important;
-    }
-
-    .hero-title {
-        font-size: 1.5rem !important;
-        text-align: center;
-        color: #fff !important;
-
-
-    }
-
-    .hero-subtitle {
-        font-size: 0.7rem !important;
-        text-align: left !important;
-    }
-
-    .uk-gap>*+* {
-        margin-left: 8px;
-    }
-
-    .hero-btn {
-        padding: 10px 20px;
-        font-size: 14px;
-    }
-
-    .slider {
-        margin: 0px 0px 0px 10px;
-
-
-    }
-
-    .uk-slideshow-items>div>img {
-        height: 50vh;
-    }
-
-    .slide-content {
-        border-radius: 60px;
-        margin-top: 120px;
-        margin-bottom: 10px;
-        box-shadow: rgba(0, 44, 110, 0.3) 0px 0px 0px 0px;
-    }
-
-
-    /* Buttons */
-    .hero-btn {
-        background: linear-gradient(135deg, rgb(255, 255, 255), rgb(228, 228, 228));
-        color: rgb(0, 44, 110) !important;
-        font-size: 0.5rem;
-        font-weight: 500;
-        padding: 6px 6px;
-        line-height: normal;
-        box-shadow: 0 3px 10px rgba(227, 238, 255, 0.25);
-        transition: all 0.3s ease;
-    }
-
-    .hero-btn:hover {
-        transform: scale(1.05);
-        box-shadow: 0 10px 20px rgb(121, 147, 185);
-    }
-
-
-    #inicio .uk-container.uk-position-center {
-        display: block !important;
-        text-align: center !important;
-    }
 }
 
 /* Buttons */
@@ -147,9 +40,188 @@
     padding: 12px 35px;
     box-shadow: 0 3px 10px rgba(227, 238, 255, 0.25);
     transition: all 0.3s ease;
+
+    /* Responsive button text */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
 }
 
 .hero-btn:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgb(121, 147, 185);
+}
+
+/* Tablet and smaller screens */
+@media (max-width: 960px) {
+    #inicio .uk-slideshow-items {
+        aspect-ratio: 16/9;
+        height: 50vh;
+    }
+
+    .slide-content {
+        margin-top: 80px !important;
+        border-radius: 40px !important;
+    }
+
+    .hero-title {
+        text-align: center;
+    }
+
+    .hero-subtitle {
+        text-align: center;
+    }
+
+
+
+
+    .uk-card-body {
+        padding: 20px !important;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    .slide-content {
+        margin-top: 100px !important;
+        border-radius: 30px !important;
+        margin-bottom: 5px !important;
+    }
+
+    #inicio .uk-slideshow-items {
+        aspect-ratio: 3/4;
+        height: 60vh;
+    }
+
+    .hero-title {
+        margin-top: 50px;
+        font-size: clamp(1.5rem, 5vw, 2rem) !important;
+    }
+
+    .hero-btn {
+        padding: 5px 15px;
+        font-size: 0.6rem;
+    }
+
+    .hero-subtitle {
+        font-size: clamp(0.8rem, 3vw, 1rem) !important;
+    }
+
+    .uk-card-body {
+        padding: 10px !important;
+    }
+
+    .uk-container.uk-position-center {
+        display: block !important;
+        text-align: center !important;
+    }
+
+
+    .uk-flex-left {
+        justify-content: center !important;
+    }
+}
+
+/* Small mobile devices (iPhone SE) */
+@media (max-width: 375px) {
+    .slide-content {
+        margin-top: 40px !important;
+        border-radius: 20px !important;
+    }
+
+    #inicio .uk-slideshow-items {
+        aspect-ratio: 3/4;
+        height: 70vh;
+        margin-top: 20px;
+    }
+
+    .hero-btn {
+        padding: 10px 25px;
+        font-size: 0.875rem;
+    }
+
+    .uk-card-body {
+        padding: 10px !important;
+    }
+
+    
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.75rem;
+    }
+
+    
+}
+
+/* Ultra-wide screens */
+@media (min-width: 1600px) {
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    .hero-subtitle {
+        font-size: 2rem;
+    }
+}
+
+/* ASUS ZenBook e laptops médios (1280px - 1366px) */
+@media (max-height: 853px), (max-width:1280px) {
+  
+
+       #inicio .uk-slideshow-items {
+      
+        margin-top: 50px;
+    }
+
+
+       .hero-title {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+
+        .hero-subtitle {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    
+        .uk-flex-left {
+      justify-content: center !important;
+    }
+
+}
+
+
+
+@media (max-height: 600px), (max-width:1024px) {
+  
+
+       #inicio .uk-slideshow-items {
+      
+        margin-top: 10px;
+    }
+
+
+       .hero-title {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+
+        .hero-subtitle {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    
+        .uk-flex-left {
+      justify-content: center !important;
+    }
+
 }

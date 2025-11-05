@@ -1,0 +1,49 @@
+<div class="uk-container uk-margin-large-top uk-margin-large-bottom">
+    <div class="uk-child-width-1-1 uk-child-width-1-2@m uk-text-center" uk-grid>
+        <!-- Text Content -->
+        <div class="uk-flex uk-flex-middle">
+            <div class="uk-card uk-card-body uk-padding-remove-horizontal">
+                <h2 class="titulo-1">
+                    O que é o AceleraCloud?
+                </h2>
+                <p class="descricao-1">
+                    O Acelera Cloud é um programa de aceleração de negócios digitais da Angola Cables que concede
+                    recursos necessários para <b>criar</b>, <b>lançar</b> e <b>escalar</b> na <b>Clouds2Africa</b>.
+                    <br><br>
+                    O programa oferece uma concessão de até <b>US$ 12.000</b> em créditos de nuvem, ajuda e suporte
+                    de arquitetos do Clouds2Africa e especialistas em desenvolvimento de negócios da Angola Cables, 
+                    suporte e acesso a outros produtos da Angola Cables em condições especiais.
+                </p>
+                <div class="uk-container uk-margin-medium-top">
+                    <p class="uk-text-left@m uk-text-center" style="color: rgb(18, 72, 130);">
+                        {{ 'descarregar_ficha' | translate }}
+                        <span class="icone uk-margin-small-right" uk-icon="icon: file-pdf; ratio:2"
+                            style="color: rgb(18, 72, 130);"></span>
+                        PT | EN
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Video Content -->
+        <div class="uk-flex uk-flex-middle uk-flex-center">
+            <div class="uk-text-center">
+                <a href="#modal-video" uk-toggle>
+                    <img class="video-thumbnail" src="img/video-miniatura.png" alt="Video Thumbnail" 
+                         width="100%" height="auto">
+                </a>
+
+                <!-- Modal -->
+                <div id="modal-video" uk-modal>
+                    <div class="uk-modal-dialog uk-margin-auto-vertical uk-modal-body uk-border-rounded">
+                        <button class="uk-modal-close-default" type="button" uk-close></button>
+                        <video controls loop muted id="promoVideo" class="promo-video uk-border-rounded" width="100%">
+                            <source src="img/maintcng.mp4" type="video/mp4">
+                            Seu navegador não suporta o vídeo em falta.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -2,18 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '@auth0/auth0-angular';
 import { MenuComponent } from '../../layout/menu/menu.component';
-import { BeneficiosComponent } from '../../layout/beneficios/beneficios.component';
-import { CategoriasComponent } from '../../layout/categorias/categorias.component';
 import { AngolacablesComponent } from '../../layout/angolacables/angolacables.component';
-import { ServicosComponent } from '../../layout/servicos/servicos.component';
 import { RodapeComponent } from '../../layout/rodape/rodape.component';
 import { SliderComponent } from '../../layout/slider/slider.component';
-import { ContactoComponent } from '../../layout/contacto/contacto.component';
-import { TesteComponent } from '../../layout/teste/teste.component';
+import { SobreComponent } from '../../layout/sobre/sobre.component';
 
 @Component({
   selector: 'app-inicio',
-  imports: [MenuComponent, BeneficiosComponent, CategoriasComponent, ContactoComponent, AngolacablesComponent, ServicosComponent, RodapeComponent, SliderComponent, ],
+  imports: [MenuComponent, AngolacablesComponent, SobreComponent, RodapeComponent, SliderComponent, ],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css'
 })
