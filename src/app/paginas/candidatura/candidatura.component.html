@@ -25,18 +25,49 @@
       <div class="uk-grid-small" uk-grid>
         <div class="uk-width-1-2@s">
           <label class="uk-form-label"> Nome da Empresa / Startup * </label>
-          <input class="uk-input uk-border-rounded" formControlName="nomeEmpresa" required />
+          <input class="uk-input uk-border-rounded" formControlName="nomeEmpresa" />
+
+          <div class="uk-text-danger"
+            *ngIf="aceleraForm.get('nomeEmpresa')?.touched && aceleraForm.get('nomeEmpresa')?.invalid">
+            <span *ngIf="aceleraForm.get('nomeEmpresa')?.errors?.['required']">
+              Nome da empresa é obrigatório.
+            </span>
+            <span *ngIf="aceleraForm.get('nomeEmpresa')?.errors?.['minlength']">
+              Mínimo de 3 caracteres.
+            </span>
+          </div>
         </div>
         <div class="uk-width-1-2@s">
-          <label class="uk-form-label">Website / Página </label>
-          <input class="uk-input uk-border-rounded" formControlName="website" />
+          <label class="uk-form-label">Website / Página</label>
+
+          <input class="uk-input uk-border-rounded" formControlName="website" placeholder="https://exemplo.com" />
+
+          <div class="uk-text-danger"
+            *ngIf="aceleraForm.get('website')?.touched && aceleraForm.get('website')?.invalid">
+
+            <span *ngIf="aceleraForm.get('website')?.errors?.['pattern']">
+              Insira um website válido (ex: https://site.com)
+            </span>
+
+          </div>
         </div>
+
       </div>
 
       <div class="uk-grid-small" uk-grid>
         <div class="uk-width-1-2@s">
           <label class="uk-form-label"> Número de Identificação Fiscal (NIF) * </label>
-          <input class="uk-input uk-border-rounded" formControlName="numeroNif" required />
+          <input class="uk-input uk-border-rounded" formControlName="numeroNif" />
+
+          <div class="uk-text-danger"
+            *ngIf="aceleraForm.get('numeroNif')?.touched && aceleraForm.get('numeroNif')?.invalid">
+            <span *ngIf="aceleraForm.get('numeroNif')?.errors?.['required']">
+              NIF é obrigatório.
+            </span>
+            <span *ngIf="aceleraForm.get('numeroNif')?.errors?.['minlength']">
+              NIF inválido (mín. 6 dígitos).
+            </span>
+          </div>
         </div>
         <div class="uk-width-1-2@s">
           <label class="uk-form-label"> Endereço Oficial </label>
@@ -47,8 +78,9 @@
       <div class="uk-grid-small" uk-grid>
         <div class="uk-width-1-3@s">
           <label class="uk-form-label">Ano de Fundação</label>
-          <input class="uk-input uk-border-rounded" type="number" formControlName="anoFundacao" />
+          <input class="uk-input uk-border-rounded" type="date" formControlName="anoFundacao" />
         </div>
+
         <div class="uk-width-2-3@s">
           <label class="uk-form-label">Número de Colaboradores</label>
           <select class="uk-select uk-border-rounded" formControlName="colaboradores">
@@ -87,18 +119,55 @@
       <div class="uk-grid-small" uk-grid>
         <div class="uk-width-1-2@s">
           <label class="uk-form-label">E-mail *</label>
-          <input class="uk-input uk-border-rounded" type="email" formControlName="email" required />
+          <input class="uk-input uk-border-rounded" type="email" formControlName="email" />
+
+          <div class="uk-text-danger" *ngIf="aceleraForm.get('email')?.touched && aceleraForm.get('email')?.invalid">
+            <span *ngIf="aceleraForm.get('email')?.errors?.['required']">
+              Email é obrigatório.
+            </span>
+            <span *ngIf="aceleraForm.get('email')?.errors?.['email']">
+              Email inválido.
+            </span>
+          </div>
         </div>
-        <div class="uk-width-1-2@s">
-          <label class="uk-form-label">Telefone / WhatsApp</label>
-          <input class="uk-input uk-border-rounded" formControlName="telefone" />
-        </div>
+<div class="uk-width-1-2@s">
+  <label class="uk-form-label">Telefone / WhatsApp *</label>
+
+  <input
+    class="uk-input uk-border-rounded"
+    formControlName="telefone"
+    placeholder="+244 9XX XXX XXX"
+  />
+
+  <div
+    class="uk-text-danger"
+    *ngIf="aceleraForm.get('telefone')?.touched && aceleraForm.get('telefone')?.invalid"
+  >
+    <span *ngIf="aceleraForm.get('telefone')?.errors?.['required']">
+      O telefone é obrigatório.
+    </span>
+
+    <span *ngIf="aceleraForm.get('telefone')?.errors?.['pattern']">
+      Telefone inválido. Use um formato válido.
+    </span>
+  </div>
+</div>
+
       </div>
 
       <h3 class="uk-heading-divider uk-margin-medium-top">Sobre o Negócio</h3>
       <label class="uk-form-label">Descreva brevemente o seu produto ou serviço *</label>
-      <textarea class="uk-textarea uk-border-rounded" rows="4" formControlName="descricao"></textarea>
-
+      <textarea class="uk-textarea uk-border-rounded" rows="4" formControlName="descricao"
+        placeholder="Descreva em poucas palavras o que a sua startup faz e qual problema resolve..."></textarea>
+      <div class="uk-text-danger"
+        *ngIf="aceleraForm.get('descricao')?.touched && aceleraForm.get('descricao')?.invalid">
+        <span *ngIf="aceleraForm.get('descricao')?.errors?.['required']">
+          Descrição obrigatória.
+        </span>
+        <span *ngIf="aceleraForm.get('descricao')?.errors?.['minlength']">
+          Mínimo 20 caracteres.
+        </span>
+      </div>
       <div class="uk-margin">
         <label class="uk-form-label">A sua solução está em operação?</label>
         <select class="uk-select uk-border-rounded" formControlName="fase">
@@ -107,17 +176,19 @@
           <option>Sim, com utilizadores ativos</option>
         </select>
       </div>
-
+      <div class="uk-text-danger" *ngIf="aceleraForm.get('etapa')?.touched && aceleraForm.get('etapa')?.invalid">
+        Selecione uma etapa.
+      </div>
       <label class="uk-form-label">Como pretende utilizar os créditos?</label>
-      <textarea class="uk-textarea uk-border-rounded"
-        placeholder="Pretendo usar os créditos para levantar uma máquina com 2vCPU 4GB de RAM " rows="3"
-        formControlName="usoCreditos"></textarea>
-
+      <textarea class="uk-textarea uk-border-rounded" rows="3" formControlName="usoCreditos"
+        placeholder="Ex: Pretendo usar os créditos para hospedar uma aplicação web e base de dados em cloud."></textarea>
       <label class="uk-form-label">Principais desafios técnicos ou de negócio</label>
-      <textarea class="uk-textarea uk-border-rounded" rows="3" formControlName="desafio"></textarea>
+      <textarea class="uk-textarea uk-border-rounded" rows="3" formControlName="desafio"
+        placeholder="Ex: Falta de escalabilidade, custos de infraestrutura, lentidão no sistema..."></textarea>
 
       <label class="uk-form-label uk-margin-small-top">Objetivos com o programa AceleraCloud</label>
-      <textarea class="uk-textarea uk-border-rounded" rows="3" formControlName="beneficioEsperado"></textarea>
+      <textarea class="uk-textarea uk-border-rounded" rows="3" formControlName="beneficioEsperado"
+        placeholder="Ex: Crescimento da base de clientes e melhor performance do sistema"></textarea>
 
       <h3 class="uk-heading-divider uk-margin-medium-top">Etapa de Participação</h3>
       <div class="uk-form-controls">
@@ -168,9 +239,25 @@
       </div>
 
       <div class="uk-margin">
-        <label class="uk-form-label">Anexos (Anexe a URL do website, apresentação, pitch, etc...)</label>
-        <input class="uk-input uk-border-rounded" type="file" />
+        <label class="uk-form-label">
+          (Opcional) Anexos (Anexe a URL do website, apresentação, pitch, etc...)
+        </label>
+
+        <input class="uk-input uk-border-rounded" type="text" formControlName="url"
+          placeholder="Ex: https://drive.google.com/apresentacao" />
+
+        <!-- Mensagens de erro -->
+        <div class="uk-text-danger" *ngIf="aceleraForm.get('url')?.touched && aceleraForm.get('url')?.invalid">
+          <span *ngIf="aceleraForm.get('url')?.errors?.['required']">
+            A URL é obrigatória.
+          </span>
+
+          <span *ngIf="aceleraForm.get('url')?.errors?.['pattern']">
+            Insira uma URL válida (ex: https://site.com)
+          </span>
+        </div>
       </div>
+
 
       <div class="uk-margin uk-margin-top">
         <label>
@@ -178,7 +265,9 @@
           Confirmo que as informações são verdadeiras e autorizo o uso dos meus dados para contacto e análise.
         </label>
       </div>
-
+      <div class="uk-text-danger" *ngIf="aceleraForm.get('setores')?.touched && aceleraForm.get('setores')?.invalid">
+        Selecione pelo menos um setor.
+      </div>
       <div class="uk-text-center uk-margin-large-top">
         <button class="uk-button uk-button-primary uk-border-rounded uk-button-large" type="submit"
           style="border-radius: 40px;" [disabled]="aceleraForm.invalid || isSubmitting">
@@ -191,7 +280,7 @@
   </div>
 
 
-  
+
 </div>
 
 

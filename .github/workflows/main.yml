@@ -60,7 +60,7 @@ jobs:
         run: |
           # ===== CONFIGURATION =====
           BUILD_DIR="dist/accloud/browser"
-          WEBDISK_URL="https://aceleracloud.marketing.host2africa.com:2078"
+          WEBDISK_URL="https://acelera.clouds2africa.com:2078"
 
           # Protected items (won't be touched)
           PROTECTED_ITEMS=(
@@ -138,4 +138,4 @@ jobs:
           done
 
           echo "🎉 Deployment completed successfully!"
-          echo "🌐 Live at: https://aceleracloud.marketing.host2africa.com"
+          echo "🌐 Live at: https://acelera.clouds2africa.com/"

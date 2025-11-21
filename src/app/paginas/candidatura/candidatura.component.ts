@@ -45,75 +45,69 @@ export class CandidaturaComponent {
   aceleraForm: FormGroup;
   selectedContactType: string = '';
 
-  constructor(private fb: FormBuilder, private translate: TranslateService, private router : Router) {
+  constructor(
+    private fb: FormBuilder,
+    private translate: TranslateService,
+    private router: Router
+  ) {
     this.aceleraForm = this.fb.group({
-      nomeEmpresa: [''],
-      website: [''],
-      anoFundacao: [''],
-      colaboradores: [''],
-      nomeContato: [''],
-      cargo: [''],
-      email: [''],
-      telefone: [''],
-      descricao: [''],
-      fase: [''],
-      desafio: [''],
-      beneficioEsperado: [''],
-      etapa: [''],
-      valorCredito: [''],
-      usoCreditos: [''],
-      referral: [''],
-      referencia: [''],
-      numeroNif: [''],
-      endereço: [''],
-      link: [''],
-      setores: this.fb.array([]), // <-- Add this
-    });
+      nomeEmpresa: ['', [Validators.required, Validators.minLength(3)]],
+      website: ['', [Validators.pattern(/https?:\/\/.+/)]],
+      anoFundacao: [
+        '',
+        [Validators.min(1900), Validators.max(new Date().getFullYear())],
+      ],
+      colaboradores: ['', Validators.required],
 
-    // Keep selectedContactType synchronized
-    this.aceleraForm.get('contactType')?.valueChanges.subscribe((value) => {
-      this.selectedContactType = value;
+      numeroNif: ['', [Validators.required, Validators.minLength(6)]],
+      endereço: ['', Validators.required],
+
+      nomeContato: ['', [Validators.required, Validators.minLength(3)]],
+      cargo: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      telefone: ['', [ Validators.required, Validators.pattern(/^[0-9+ ]{8,}$/)]],
+
+      descricao: ['', [Validators.required, Validators.minLength(20)]],
+      fase: ['', Validators.required],
+      desafio: ['', Validators.minLength(10)],
+      beneficioEsperado: ['', Validators.minLength(10)],
+      usoCreditos: ['', Validators.required],
+
+      etapa: ['', Validators.required],
+      referral: ['', Validators.required],
+
+      setores: this.fb.array([], Validators.required),
+      url: [
+        '',
+        Validators.pattern(
+          /^(https?:\/\/)?([\w\d-]+\.)+[\w-]+(\/[\w\-./?%&=]*)?$/
+        ),
+      ],
     });
   }
 
-onSetorChange(event: any) {
-  const setoresArray: FormArray = this.aceleraForm.get('setores') as FormArray;
+  onSetorChange(event: any) {
+    const setoresArray: FormArray = this.aceleraForm.get(
+      'setores'
+    ) as FormArray;
 
-  if (event.target.checked) {
-    setoresArray.push(this.fb.control(event.target.value));
-  } else {
-    const index = setoresArray.controls.findIndex(x => x.value === event.target.value);
-    if (index !== -1) {
-      setoresArray.removeAt(index);
+    if (event.target.checked) {
+      setoresArray.push(this.fb.control(event.target.value));
+    } else {
+      const index = setoresArray.controls.findIndex(
+        (x) => x.value === event.target.value
+      );
+      if (index !== -1) {
+        setoresArray.removeAt(index);
+      }
     }
   }
-}
-
 
   onMentoriaChange(event: any) {
     // implementação futura (guardar mentoria selecionada)
   }
 
-  // Getter for FormArray
-  get servicoInteresse(): FormArray {
-    return this.aceleraForm.get('servicoInteresse') as FormArray;
-  }
-
   // Handle checkbox changes
-  onCheckboxChange(event: any) {
-    const formArray: FormArray = this.servicoInteresse;
-
-    if (event.target.checked) {
-      formArray.push(this.fb.control(event.target.value));
-    } else {
-      const index = formArray.controls.findIndex(
-        (x) => x.value === event.target.value
-      );
-      if (index !== -1) {
-        formArray.removeAt(index);
-      }
-    }
-  }
 
   // Submit form
   submitForm(event: Event) {
@@ -160,17 +154,12 @@ onSetorChange(event: any) {
         // Mostra modal de sucesso
         if (successModal) successModal.show();
 
-        // Reseta formulário e FormArray
-        this.aceleraForm.reset();
-        if (this.servicoInteresse) this.servicoInteresse.clear();
-
         this.isSubmitting = false;
 
-         // Redireciona para a página inicial após 2s ou quando fechar o modal
-      setTimeout(() => {
-        this.router.navigate(['/']);
-      }, 2000);
-
+        // Redireciona para a página inicial após 2s ou quando fechar o modal
+        setTimeout(() => {
+          this.router.navigate(['/']);
+        }, 2000);
       })
       .catch((error: EmailJSResponseStatus) => {
         console.error('FAILED...', error.text);
