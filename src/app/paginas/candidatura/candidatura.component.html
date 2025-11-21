@@ -9,7 +9,8 @@
         AceleraCloud by Angola Cables
       </h1>
       <p style="color:#fff" class="uk-text-lead uk-margin-remove-top">
-        Candidate-se a créditos de Clouds e suporte especializada para lançar, escalar ou migrar seus projecto para a nuvem
+        Candidate-se a créditos de Clouds e suporte especializada para lançar, escalar ou migrar seus projecto para a
+        nuvem
       </p>
     </div>
   </div>
@@ -17,11 +18,8 @@
 
 <div class="uk-section uk-background-muted fundo-artigo">
   <div class="uk-container uk-container-small">
- <form style="border-radius: 40px;"
-  [formGroup]="aceleraForm"
-  (ngSubmit)="submitForm($event)"
-  class="uk-form-stacked uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-medium"
->
+    <form style="border-radius: 40px;" [formGroup]="aceleraForm" (ngSubmit)="submitForm($event)"
+      class="uk-form-stacked uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-medium">
       <h3 class="uk-heading-divider">Informações da sua organização</h3>
 
       <div class="uk-grid-small" uk-grid>
@@ -69,6 +67,7 @@
             <input class="uk-checkbox" type="checkbox" [value]="setor" (change)="onSetorChange($event)" />
             {{ setor }}
           </label>
+
         </div>
       </div>
 
@@ -109,6 +108,11 @@
         </select>
       </div>
 
+      <label class="uk-form-label">Como pretende utilizar os créditos?</label>
+      <textarea class="uk-textarea uk-border-rounded"
+        placeholder="Pretendo usar os créditos para levantar uma máquina com 2vCPU 4GB de RAM " rows="3"
+        formControlName="usoCreditos"></textarea>
+
       <label class="uk-form-label">Principais desafios técnicos ou de negócio</label>
       <textarea class="uk-textarea uk-border-rounded" rows="3" formControlName="desafio"></textarea>
 
@@ -122,6 +126,8 @@
         <label><input class="uk-radio" type="radio" value="Migrar" formControlName="etapa" /> Migrar</label>
       </div>
 
+
+      <!-- 
       <h3 class="uk-heading-divider uk-margin-medium-top">Recursos e Benefícios</h3>
       <div class="uk-margin">
         <label class="uk-form-label">Valor estimado de crédito pretendido</label>
@@ -130,7 +136,7 @@
           <option>$1.000 – $5.000</option>
           <option>$5.000 – $12.000</option>
         </select>
-      </div>
+      </div> 
 
       <div class="uk-margin">
         <label class="uk-form-label">Tipos de mentoria desejada</label>
@@ -141,23 +147,28 @@
           <label><input class="uk-checkbox" type="checkbox" (change)="onMentoriaChange($event)" value="Ambas" /> Todas</label>
         </div>
       </div>
+-->
 
-      <label class="uk-form-label">Como pretende utilizar os créditos?</label>
-      <textarea class="uk-textarea uk-border-rounded" rows="3" formControlName="usoCreditos"></textarea>
-
-      <h3 class="uk-heading-divider uk-margin-medium-top">Referral Program</h3>
+      <h3 class="uk-heading-divider uk-margin-medium-top">Programa Global de Parceiros da Angola Cables </h3>
       <div class="uk-margin-small">
+        <p> Ao ingressar no <b> Programa Global de Parceiros da Angola Cables </b>, sua empresa acessa soluções
+          avançadas de
+          conectividade, infraestrutura moderna e suporte especializado para fortalecer seu portfolio serviços e
+          impulsionar receitas como <b> Indicador de Negócios, Revendedor ou Agente de Vendas </b> de soluções de <b>
+            Conectividade,
+            Acesso à Internet,
+            Data Center,
+            Cloud,
+            Segurança e
+            Virtualização </b> </p>
+        <label class="uk-form-label">Tem interesse?</label>
         <label><input class="uk-radio" type="radio" value="Sim" formControlName="referral" /> Sim</label>
-        <label class="uk-margin-left"><input class="uk-radio" type="radio" value="Não" formControlName="referral" /> Não</label>
+        <label class="uk-margin-left"><input class="uk-radio" type="radio" value="Não" formControlName="referral" />
+          Não</label>
       </div>
-      <input
-        class="uk-input uk-border-rounded"
-        formControlName="referencia"
-        placeholder="Nome ou empresa que o indicou (se aplicável)"
-      />
 
       <div class="uk-margin">
-        <label class="uk-form-label">Anexe documento (ex: apresentação, pitch, etc...)</label>
+        <label class="uk-form-label">Anexos (Anexe a URL do website, apresentação, pitch, etc...)</label>
         <input class="uk-input uk-border-rounded" type="file" />
       </div>
 
@@ -169,21 +180,52 @@
       </div>
 
       <div class="uk-text-center uk-margin-large-top">
-        <button
-          class="uk-button uk-button-primary uk-border-rounded uk-button-large"
-          type="submit" style="border-radius: 40px;"
-          [disabled]="aceleraForm.invalid || isSubmitting"
-        >
+        <button class="uk-button uk-button-primary uk-border-rounded uk-button-large" type="submit"
+          style="border-radius: 40px;" [disabled]="aceleraForm.invalid || isSubmitting">
           <span *ngIf="!isSubmitting" uk-icon="rocket"></span>
-          <span  *ngIf="!isSubmitting"> Enviar Candidatura</span>
+          <span *ngIf="!isSubmitting"> Enviar Candidatura</span>
           <span *ngIf="isSubmitting" uk-spinner></span>
         </button>
       </div>
     </form>
   </div>
+
+
+  
 </div>
 
 
+<!-- Modal de Loading -->
+<div id="loading-modal" uk-modal>
+  <div class="uk-modal-dialog uk-modal-body glassmorphic-modal uk-text-center">
+    <h2>Enviando formulário...</h2>
+    <div uk-spinner="ratio: 2"></div>
+  </div>
+</div>
+
+<!-- Modal de Sucesso -->
+<div id="success-modal" uk-modal>
+  <div class="uk-modal-dialog uk-modal-body glassmorphic-modal uk-text-center">
+    <button class="uk-modal-close-default" type="button" uk-close></button>
+    <h2>Formulário Enviado!</h2>
+    <p>O seu formulário foi enviado com sucesso. Entraremos em contacto em breve.</p>
+    <button class="uk-button uk-button-primary uk-border-rounded" type="button" uk-toggle="target: #success-modal">
+      Fechar
+    </button>
+  </div>
+</div>
+
+<!-- Modal de Erro -->
+<div id="error-modal" uk-modal>
+  <div class="uk-modal-dialog uk-modal-body glassmorphic-modal uk-text-center">
+    <button class="uk-modal-close-default" type="button" uk-close></button>
+    <h2>Erro ao Enviar</h2>
+    <p>Ocorreu um erro no envio do formulário. Por favor, tente novamente mais tarde.</p>
+    <button class="uk-button uk-button-danger uk-border-rounded" type="button" uk-toggle="target: #error-modal">
+      Fechar
+    </button>
+  </div>
+</div>
 
 
 <app-rodape></app-rodape>

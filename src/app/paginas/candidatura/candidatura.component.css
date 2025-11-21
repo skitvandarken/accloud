@@ -52,3 +52,13 @@ label {
 }
 
 
+/* candidatura.component.css */
+.glassmorphic-modal {
+  background: rgb(255, 255, 255);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.677);
+  color: #009637;
+  text-align: center;
+}
